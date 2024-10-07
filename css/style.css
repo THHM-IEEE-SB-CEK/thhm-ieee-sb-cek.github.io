@@ -28,7 +28,7 @@
 
 body{
   /* background-color:#ded8cd; */
-  background-color:#ffffff;
+  background-color:#000000;
 }
 
 header,
@@ -79,7 +79,7 @@ section {
 }
 
 .navbar-links li a:hover {
-  color: #d98f05;
+  color: #EB9C4D;
 }
 
 .brand-title {
@@ -196,13 +196,36 @@ header .row .col-md-7 {
 header {
 
   background-image: url("../images/CEKBG.png");
-  background-position:10%;
-  background-size: 80%;
+  background-position: 10% -180px;
+  background-size: 100%;
   transform:scaleX(-2rem);
 zoom: 0;
-height:107vmin;
+height:auto;
 width: 100%;
 z-index: 0;
+
+}
+.texts{
+  padding-left: 20vh;
+   float: left; 
+}
+.Mainhead{
+  height:8vw;
+   width: 50vw;
+   float: inline-start;
+   margin: 0 auto; 
+}
+.hillimage{
+  z-index: 0;
+   width:100vw;
+   height: auto;
+   margin-left: -7vw;
+   position: relative;
+   top:-50px;
+}
+.clear {
+  clear: both;
+  margin-top: 25px; 
 }
 @media (max-width:800px){
 header{
@@ -308,36 +331,49 @@ header .row .col-md-6 {
 
 
 .section-1 {
-
-  padding: 2 2 0 2rem;
+  margin-top: 3%;
+  padding: 2 2 2 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 1000px;
-  background-color: #ffffff;
+  background-color: #000000;
+ 
   
 }
 .section-1 .sectionhead{
   padding: 5rem 0rem 3rem 0rem ;
+  color: #EB9C4D;
 }
 
 .section-1 .container{
   margin: 10px;
 }
-
+.section-1 .Subhead{
+font-weight: 600;
+font-family: Montserrat;
+color: #ffffff;
+font-size: 3rem;
+}
+.Subhead{
+  font-weight: 600;
+font-family: Montserrat;
+color: #ffffff;
+font-size: 3rem;
+}
 .section-1 .pray img {
   top:10px;
   width: 85vmin;
   border-radius: 0.5em;
-  transform: translate(-40px,-5px);
+
 
 }
 .section-1 .pray2 img {
-  top:10px;
+
   width: 85vmin;
   height: auto;
   border-radius: 0.5em;
-  transform: translate(40px,5px);
+  
 
 }
 @media (max-width: 800px) {
@@ -364,10 +400,11 @@ header .row .col-md-6 {
 
 .section-1 .panel {
   box-shadow: 0 0 10px rgba(217, 143, 5, 1);
-  background-color: #ffffff;
+  background-color: #000000;
   border-radius: 2rem;
   text-align: left;
   padding: 2rem;
+  box-shadow: 0,10px,10px,0 rgba(0,0,0,19),0 10px ,10px ,0 rgba(0,0,0,19);
   font-family: "Montserrat";
   z-index: 1;
   margin-top: 50px;
@@ -383,7 +420,7 @@ header .row .col-md-6 {
 
 .section-1 .panel p {
   font-size: 0.9em;
-  color: black;
+  color: white;
   font-weight:500;
 }
 
@@ -415,7 +452,7 @@ header .row .col-md-6 {
 }
 
 .gap1{
- 
+ background-color: #000000;
 
 }
   .carousel-item img {
@@ -423,10 +460,7 @@ header .row .col-md-6 {
     width:50vw;
 
   }
-  .carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(0%) brightness(0); /* Change this to any color you prefer */
-}
+  
   @media (max-width:800px)
   {
     .carousel-item img {
@@ -544,7 +578,7 @@ header .row .col-md-6 {
 
 }
 
-.card-body .pricing {
+/* .card-body .pricing {
 
   border-top-right-radius: 20vmin;
   border-top-left-radius: 20vmin;
@@ -555,7 +589,7 @@ header .row .col-md-6 {
   font-size: 10vmin;
   padding: 1em 0.5em;
 
-}
+} */
 
 
 
@@ -740,6 +774,11 @@ a {
 {
   margin-top:5vmin;
 }
+
+#register .col-md-6 img:hover{
+border:2px #EB9C4D;
+transition: 3s;
+}
 @media (max-width:800px)
 {
   #register
@@ -753,7 +792,8 @@ a {
     position: relative;
     width: 100%;
     height: 80vmin;
-    padding-bottom: 36.25%; /* 16:9 aspect ratio */
+    /* padding-bottom: 36.25%; 16:9 aspect ratio */
+    padding-bottom:20%;
   }
   .iframe-container iframe {
     position: absolute;
@@ -778,7 +818,7 @@ a {
   font-family: "Rajdhani", sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #000000; 
+  color: #EB9C4D; 
    font-size: 50px;
 }
 
@@ -825,6 +865,7 @@ a {
   /* transform: rotate(60deg); */
   height: 30vw;
   width: auto;
+  border:5px #EB9C4D;
 }
 
 
