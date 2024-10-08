@@ -204,14 +204,14 @@ header .row .col-md-7 {
 
 header {
  
-background-size: cover;;
+background-size: cover;
   background-repeat: no-repeat;
  background-image: url("../images/THMSTROKE-01 2.png");  
   background-position: 10% ;
   background-size: cover;
   transform:scaleX(-2rem);
   zoom: 0;
-  height:40rem;
+  height:100vh;
   width: 100%;
   z-index: 0;
   flex-direction: column;
