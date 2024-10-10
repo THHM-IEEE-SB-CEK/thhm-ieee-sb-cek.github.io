@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THM'24 Landing</title>
+    <link rel="stylesheet" href="./styles2.css"> <!-- Link to the external CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/aquire?styles=58838,58840,58839" rel="stylesheet">
+</head>
+
+<body>
+    <section class="hero">
+        <div class="lander">
+            <!-- Background Stroke Text -->
+            <div class="bg-text-stroke">THM</div>
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="./THMLOGOshadow-04-04.png" alt="Logo">
+            </div>
+
+            <!-- Filled THM Text -->
+            <div class="main-text">THM</div>
+
+            <!-- Date Information -->
+            <div>
+                <hr class="date-line">
+                <div class="date-info">October</div>
+                <div class="dates">26 27</div>
+            </div>
+
+            <!-- Location Information -->
+            <div class="at">at</div>
+            <div class="location">College of Engineering Karunagappally</div>
+
+            <div class="thm">TRAVANCORE HUB MEET 2024</div>
+            <!-- Navbar -->
+            <nav>
+                <div class="menu-icon" id="menuToggle">&#9776;</div>
+                <ul id="navbarMenu">
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Events</li>
+                    <li>Contact</li>
+                </ul>
+                <div class="navbar-logo">
+                    <a href="#0"><img src="./THMtagline.png" alt="Navbar Logo" width="220px"></a>
+                </div>
+
+            </nav>
+
+            <!-- Black overlay -->
+            <div id="overlay" class="overlay"></div>
+            <div class="right-line"></div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="right-line bottom"></div>
+
+
+            <!-- Scroll Arrow -->
+            <div class="scroll-down">
+                <div class="arrow-circle">
+                    <i class="fas fa-angle-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function () {
+            var menu = document.getElementById('navbarMenu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function () {
+            var menu = document.getElementById('navbarMenu');
+            var overlay = document.getElementById('overlay');
+
+            // Toggle the visibility of the menu and the overlay
+            menu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        // Optional: Close the menu when clicking outside the menu (on the overlay)
+        document.getElementById('overlay').addEventListener('click', function () {
+            var menu = document.getElementById('navbarMenu');
+            var overlay = document.getElementById('overlay');
+
+            // Remove the 'active' class to hide the menu and overlay
+            menu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+
+
+</body>
+
+</html>
