@@ -9,14 +9,15 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     font-family: Arial, sans-serif;
     overflow: hidden;
 }
 
 
-.hero{
+.hero {
     background: linear-gradient(135deg, #181717, #3b3a3a);
     overflow: hidden;
     height: 100%;
@@ -32,7 +33,7 @@ body, html {
     overflow: hidden;
 }
 
-.lander{
+.lander {
     position: relative;
     height: 100%;
     width: 100%;
@@ -53,8 +54,10 @@ body, html {
     -webkit-text-stroke: 1px rgba(122, 119, 119, 0.356);
     opacity: 0;
     animation: fadeInLeft 1s forwards;
-    font-family: 'Aquire', sans-serif; /* Apply Aquire Bold font */
-    font-weight: 700; /* Ensure bold weight is applied */
+    font-family: 'Aquire', sans-serif;
+    /* Apply Aquire Bold font */
+    font-weight: 700;
+    /* Ensure bold weight is applied */
     letter-spacing: 25px !important;
     transform: scaleX(1);
     transform-origin: left center;
@@ -70,9 +73,10 @@ body, html {
     animation: fadeInRight 1s forwards;
 }
 
-.logo img{
+.logo img {
     width: 48vw;
 }
+
 /* Filled THM Text */
 .main-text {
     position: absolute;
@@ -83,8 +87,10 @@ body, html {
     text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
     opacity: 0;
     animation: fadeInDrop 1.5s forwards 1s;
-    font-family: 'Aquire', sans-serif; /* Apply Aquire Bold font */
-    font-weight: 700; /* Ensure bold weight is applied */
+    font-family: 'Aquire', sans-serif;
+    /* Apply Aquire Bold font */
+    font-weight: 700;
+    /* Ensure bold weight is applied */
     letter-spacing: 25px !important;
 }
 
@@ -101,13 +107,16 @@ body, html {
     opacity: 0;
     animation: fadeInDrop 1s forwards 1.5s;
 }
+
 .dates {
     position: absolute;
     top: 21vh;
     right: 28vw;
     font-size: 3.8rem;
-    font-family: 'Aquire', sans-serif; /* Apply Aquire Bold font */
-    font-weight: 700; /* Ensure bold weight is applied */
+    font-family: 'Aquire', sans-serif;
+    /* Apply Aquire Bold font */
+    font-weight: 700;
+    /* Ensure bold weight is applied */
     text-align: center;
     color: #ff9933;
     opacity: 0;
@@ -127,6 +136,7 @@ body, html {
     opacity: 0;
     animation: fadeInDrop 1s forwards 1.7s;
 }
+
 .at {
     position: absolute;
     top: 23vh;
@@ -140,7 +150,7 @@ body, html {
     animation: fadeInDrop 1s forwards 1.7s;
 }
 
-.thm{
+.thm {
     position: absolute;
     top: 81vh;
     left: 20.5vw;
@@ -182,6 +192,7 @@ nav .menu-icon {
     color: white;
     margin-right: 30px;
 }
+
 nav .menu-icon:hover {
     color: #ff9933;
 }
@@ -199,6 +210,7 @@ nav ul li {
     color: white;
     cursor: pointer;
 }
+
 nav ul li:hover {
     color: #ff9933;
 }
@@ -219,7 +231,8 @@ nav ul li:hover {
     position: absolute;
     right: 2%;
     top: 0;
-    height: 58vh; /* Adjusted height to leave space for the social icons */
+    height: 58vh;
+    /* Adjusted height to leave space for the social icons */
     width: 2px;
     background-color: rgba(255, 255, 255, 0.4);
     opacity: 0;
@@ -229,7 +242,8 @@ nav ul li:hover {
 .right-line.bottom {
     top: auto;
     bottom: 0;
-    height: 15vh; /* Same height, bottom half */
+    height: 15vh;
+    /* Same height, bottom half */
     opacity: 0;
     animation: fadeInLeft 1.5s forwards 2s;
 }
@@ -237,8 +251,10 @@ nav ul li:hover {
 .social-icons {
     position: absolute;
     right: 1.5vw;
-    top: 61.5vh; /* This aligns the icons in the "gap" of the line */
-    display: flex;;
+    top: 61.5vh;
+    /* This aligns the icons in the "gap" of the line */
+    display: flex;
+    ;
     flex-direction: column;
     gap: 25px;
     opacity: 0;
@@ -247,29 +263,35 @@ nav ul li:hover {
 
 .social-icons a {
     color: white;
-    font-size: 1.1vw; /* Set the base font size for icons */
+    font-size: 1.1vw;
+    /* Set the base font size for icons */
     text-decoration: none;
-    transition: color 0.3s ease, font-size 0.3s ease; /* Smooth hover effect */
+    transition: color 0.3s ease, font-size 0.3s ease;
+    /* Smooth hover effect */
 }
 
 /* Ensure SVG has the same size as font-awesome icons */
 .social-icons .social-icon {
-    width: 1.1vw; /* Match the width to font-size */
-    height: auto;  /* Maintain aspect ratio */
+    width: 1.1vw;
+    /* Match the width to font-size */
+    height: auto;
+    /* Maintain aspect ratio */
     fill: white;
-    transition: fill 0.3s ease; /* Smooth transition for hover effect */
+    transition: fill 0.3s ease;
+    /* Smooth transition for hover effect */
 }
 
 /* Change font size and color on hover for Font Awesome icons */
 .social-icons a:hover {
     color: #ff9933;
-    font-size: 1.15vw; /* Slight increase on hover */
+    /* Slight increase on hover */
     text-decoration: none;
 }
 
 /* Hover effect for SVG icons */
 .social-icons a:hover .social-icon path {
-    fill: #ff9933; /* Change to orange with transparency on hover */
+    fill: #ff9933;
+    /* Change to orange with transparency on hover */
 }
 
 /* Scroll Arrow with Circle */
@@ -282,25 +304,33 @@ nav ul li:hover {
 }
 
 .scroll-down .arrow-circle {
-    width: 2.5vw; /* Equal width and height */
+    width: 2.5vw;
+    /* Equal width and height */
     height: 2.5vw;
     font-size: 1.5vw;
-    color: #ff9933; /* Initial color of the arrow */
+    color: #ff9933;
+    /* Initial color of the arrow */
     border: 2px solid white;
-    border-radius: 50%; /* Creates the circle */
+    border-radius: 50%;
+    /* Creates the circle */
     opacity: 0;
     animation: fadeInArrow 1.5s forwards 2.5s;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center the arrow inside the circle */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color and background */
+    align-items: center;
+    /* Center the arrow inside the circle */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for color and background */
 }
 
 /* Hover effect for arrow-circle */
 .scroll-down .arrow-circle:hover {
-    background-color: #ff9933; /* Solid orange background */
-    color: white; /* Arrow color changes to white */
-    border-color: #ff9933; /* Border color changes to match the background */
+    background-color: #ff9933;
+    /* Solid orange background */
+    color: white;
+    /* Arrow color changes to white */
+    border-color: #ff9933;
+    /* Border color changes to match the background */
 }
 
 .scroll-down .arrow-circle i {
@@ -313,6 +343,7 @@ nav ul li:hover {
         opacity: 0;
         transform: translateX(100px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -324,6 +355,7 @@ nav ul li:hover {
         opacity: 0;
         transform: translateX(-100px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -335,6 +367,7 @@ nav ul li:hover {
         opacity: 0;
         transform: translateY(-50px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -346,17 +379,24 @@ nav ul li:hover {
         opacity: 0;
         transform: translateY(30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(0); /* Start and end at the original position */
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Start and end at the original position */
     }
+
     50% {
-        transform: translateY(5px); /* Move up 10 pixels at the middle of the animation */
+        transform: translateY(5px);
+        /* Move up 10 pixels at the middle of the animation */
     }
 }
 
@@ -368,36 +408,48 @@ nav ul li:hover {
 
 /* Mobile Devices (screens smaller than 768px) */
 @media (max-width: 768px) {
-    body, html {
-        overflow: auto; /* Allow scrolling for mobile devices */
+
+    body,
+    html {
+        overflow: auto;
+        /* Allow scrolling for mobile devices */
     }
-    
+
     .bg-text-stroke {
-        font-size: 28vw; /* Smaller font size for mobile */
-        left: 30vw; /* Adjust positioning */
-        top: 65%; /* Position it better for mobile */
+        font-size: 28vw;
+        /* Smaller font size for mobile */
+        left: 30vw;
+        /* Adjust positioning */
+        top: 65%;
+        /* Position it better for mobile */
         letter-spacing: 10px;
     }
 
     .logo {
         top: 28vh;
-        left: -62vw; /* Adjust logo positioning for mobile */
+        left: -62vw;
+        /* Adjust logo positioning for mobile */
     }
+
     .logo img {
-        width: 125vw; /* Adjust logo size for mobile */
+        width: 125vw;
+        /* Adjust logo size for mobile */
     }
 
     .main-text {
         font-size: 20vw;
         top: 67.5vh;
-        left: 38.5vw; /* Adjust position for mobile */
+        left: 38.5vw;
+        /* Adjust position for mobile */
         letter-spacing: 10px;
     }
 
-    .date-info{
-        font-size: 2.5rem; /* Make text smaller for mobile */
+    .date-info {
+        font-size: 2.5rem;
+        /* Make text smaller for mobile */
         left: 1vw;
-        top: 18vh;;
+        top: 18vh;
+        ;
     }
 
     .dates {
@@ -408,17 +460,21 @@ nav ul li:hover {
     }
 
     .date-line {
-        width: 100px; /* Make date-line smaller */
+        width: 100px;
+        /* Make date-line smaller */
         right: 20.75vw;
-        top: 22vh;;
+        top: 22vh;
+        ;
     }
 
     .location {
-        font-size: 1rem; /* Adjust location font size */
+        font-size: 1rem;
+        /* Adjust location font size */
         left: 20vw;
         top: 40vh;
         right: 0;
     }
+
     .at {
         font-size: 3rem;
         top: 35.5vh;
@@ -426,115 +482,157 @@ nav ul li:hover {
     }
 
     .thm {
-        font-size: 0.81rem; /* Reduce size for mobile */
+        font-size: 0.81rem;
+        /* Reduce size for mobile */
         left: 40.75vw;
         top: 78.25vh;
     }
 
     nav {
-        background-color: rgba(0, 0, 0, 0.8); /* Add background for better readability */
-        top: 0; /* Position at the top */
+        background-color: rgba(0, 0, 0, 0.8);
+        /* Add background for better readability */
+        top: 0;
+        /* Position at the top */
         padding-top: 10px;
         padding-bottom: 10px;
-        z-index: 1001; /* Ensure the nav is on top of the overlay */
+        z-index: 1001;
+        /* Ensure the nav is on top of the overlay */
     }
-    
+
     nav .menu-icon {
-        font-size: 6vw; /* Make menu icon larger for touch targets */
-        z-index: 1002; /* Keep the menu icon on top of everything */
+        font-size: 6vw;
+        /* Make menu icon larger for touch targets */
+        z-index: 1002;
+        /* Keep the menu icon on top of everything */
     }
-    
+
     /* Initially hide the ul links */
     nav ul {
-        display: none; /* Hide the menu links initially */
-        flex-direction: column; /* Stack menu items vertically on mobile */
-        gap: 15px; /* Adjust gap */
+        display: none;
+        /* Hide the menu links initially */
+        flex-direction: column;
+        /* Stack menu items vertically on mobile */
+        gap: 15px;
+        /* Adjust gap */
         position: absolute;
         top: 10vh;
         left: 0.5vw;
         padding: 20px;
         border-radius: 10px;
-        z-index: 1003; /* Ensure the menu is on top of the overlay */
+        z-index: 1003;
+        /* Ensure the menu is on top of the overlay */
     }
-    
+
     nav ul li {
-        font-size: 5vw; /* Larger font for better readability */
-        text-align: left; /* Align text to the left */
+        font-size: 5vw;
+        /* Larger font for better readability */
+        text-align: left;
+        /* Align text to the left */
         color: white;
         margin-bottom: 15px;
     }
 
     .navbar-logo {
-        width: 50vw; /* Adjust logo size */
+        width: 50vw;
+        /* Adjust logo size */
     }
 
     /* Overlay effect */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9); /* Black overlay */
-    z-index: 1000; /* Behind the nav but above the rest of the page */
-    display: none; /* Initially hidden */
-}
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black overlay */
+        z-index: 1000;
+        /* Behind the nav but above the rest of the page */
+        display: none;
+        /* Initially hidden */
+    }
 
-/* Show the overlay and menu when active */
-.overlay.active,
-nav ul.active {
-    display: block !important; /* Show the overlay and menu when active */
-}
+    /* Show the overlay and menu when active */
+    .overlay.active,
+    nav ul.active {
+        display: block !important;
+        /* Show the overlay and menu when active */
+    }
 
-/* Transition for smooth effect */
-nav ul {
-    transition: opacity 0.3s ease-in-out;
-}
+    /* Transition for smooth effect */
+    nav ul {
+        transition: opacity 0.3s ease-in-out;
+    }
 
-.overlay.active {
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-}
+    .overlay.active {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
 
     /* Right-side line with icons */
     .right-line {
-        height: 43vh; /* Shorter height for mobile */
+        height: 43vh;
+        /* Shorter height for mobile */
         right: 3.15%;
     }
+
     .right-line.bottom {
-        height: 33vh; /* Shorter height for mobile */
+        height: 33vh;
+        /* Shorter height for mobile */
     }
 
     .social-icons {
-        top: 45vh; /* Adjust position for mobile */
+        top: 45vh;
+        /* Adjust position for mobile */
     }
 
     .social-icons a {
-        font-size: 0.8rem; /* Adjust font size for mobile */
+        font-size: 0.8rem;
+        /* Adjust font size for mobile */
     }
+
     .social-icons .social-icon {
-        width: 0.8rem; /* Adjust icon size for mobile */
+        width: 0.8rem;
+        /* Adjust icon size for mobile */
     }
 
     .scroll-down .arrow-circle {
-        width: 10vw; /* Adjust size of scroll icon */
+        width: 10vw;
+        /* Adjust size of scroll icon */
         height: 10vw;
         font-size: 5vw;
+    }
+
+    /* Change font size and color on hover for Font Awesome icons */
+    .social-icons a:hover {
+        color: #ff9933;
+        /* Slight increase on hover */
+        text-decoration: none;
+    }
+
+    /* Hover effect for SVG icons */
+    .social-icons a:hover .social-icon path {
+        fill: #ff9933;
+        /* Change to orange with transparency on hover */
     }
 }
 
 /* Ultra-wide Screens (screens wider than 1920px) */
 @media (min-width: 1920px) {
     .container {
-        max-width: 1900px; /* Limit width to avoid stretching */
+        max-width: 1900px;
+        /* Limit width to avoid stretching */
         margin: 0 auto;
     }
-    .lander{
+
+    .lander {
         width: 100%;
         margin: 0 auto;
     }
+
     .bg-text-stroke {
-        font-size: 18vw; /* Increase font size */
+        font-size: 18vw;
+        /* Increase font size */
         left: 5vw;
         top: 49vh;
         letter-spacing: 30px;
@@ -544,14 +642,17 @@ nav ul {
         left: -11.75vw;
         top: 28vh;
     }
+
     .logo img {
-        width: 28.5vw; /* Increase logo size */
+        width: 28.5vw;
+        /* Increase logo size */
     }
 
     .main-text {
         font-size: 10vw;
         top: 63.5vh;
-        left: 11.75vw; /* Adjust to fill more space */
+        left: 11.75vw;
+        /* Adjust to fill more space */
         letter-spacing: 30px;
     }
 
@@ -565,17 +666,21 @@ nav ul {
         right: 25.5vw;
         top: 23vh;
     }
+
     .date-line {
-        width: 200px; /* Increase width */
+        width: 200px;
+        /* Increase width */
         right: 26.25vw;
         top: 21vh;
     }
 
     .location {
-        font-size: 2.25vw; /* Make location text bigger */
+        font-size: 2.25vw;
+        /* Make location text bigger */
         right: 31.5vw;
         top: 38vh;
     }
+
     .at {
         font-size: 7vw;
         top: 25vh;
@@ -583,7 +688,8 @@ nav ul {
     }
 
     .thm {
-        font-size: 1.4vw; /* Make it larger for ultrawide */
+        font-size: 1.4vw;
+        /* Make it larger for ultrawide */
         left: 12.5vw;
         top: 88.5vh;
     }
@@ -598,7 +704,8 @@ nav ul {
     }
 
     .navbar-logo {
-        max-height: 150px; /* Increase logo size */
+        max-height: 150px;
+        /* Increase logo size */
     }
 
     /* Right-side line with icons */
