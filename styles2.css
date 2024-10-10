@@ -439,7 +439,7 @@ nav ul li:hover {
     .main-text {
         font-size: 20vw;
         top: 67.5vh;
-        left: 38.5vw;
+        left: 36vw;
         /* Adjust position for mobile */
         letter-spacing: 10px;
     }
@@ -454,7 +454,7 @@ nav ul li:hover {
 
     .dates {
         font-size: 2.2rem;
-        left: 31.5vw;
+        left: 33vw;
         top: 23vh;
         right: 0;
     }
@@ -462,34 +462,34 @@ nav ul li:hover {
     .date-line {
         width: 100px;
         /* Make date-line smaller */
-        right: 20.75vw;
-        top: 22vh;
+        right: 20vw;
+        top: 21.5vh;
         ;
     }
 
     .location {
-        font-size: 1rem;
+        font-size: 1.5rem;
         /* Adjust location font size */
-        left: 20vw;
-        top: 40vh;
+        left: 18vw;
+        top: 36vh;
         right: 0;
     }
 
     .at {
-        font-size: 3rem;
-        top: 35.5vh;
-        left: 31vw;
+        font-size: 4.5rem;
+        top: 31vh;
+        left: 18vw;
     }
 
     .thm {
         font-size: 0.81rem;
         /* Reduce size for mobile */
-        left: 40.75vw;
-        top: 78.25vh;
+        left: 40vw;
+        top: 77.5vh;
     }
 
     nav {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgb(0, 0, 0);
         /* Add background for better readability */
         top: 0;
         /* Position at the top */
