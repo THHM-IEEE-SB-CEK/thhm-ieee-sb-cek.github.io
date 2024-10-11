@@ -791,22 +791,31 @@
     </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const menuIcon = document.getElementById('menuToggle');
-      const navbarMenu = document.getElementById('navbarMenu');
-      const overlay = document.getElementById('overlay');
-  
-      // Toggle the active class when the menu icon is clicked
-      menuIcon.addEventListener('click', function () {
-        navbarMenu.classList.toggle('active');
-        overlay.classList.toggle('active');
-      });
-  
-      // Hide the menu and overlay when the overlay is clicked
-      overlay.addEventListener('click', function () {
-        navbarMenu.classList.remove('active');
-        overlay.classList.remove('active');
-      });
+  const menuIcon = document.getElementById('menuToggle');
+  const navbarMenu = document.getElementById('navbarMenu');
+  const overlay = document.getElementById('overlay');
+  const navbarLinks = navbarMenu.querySelectorAll('a'); // Select all links inside the navbar
+
+  // Toggle the active class when the menu icon is clicked
+  menuIcon.addEventListener('click', function () {
+    navbarMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+  });
+
+  // Hide the menu and overlay when the overlay is clicked
+  overlay.addEventListener('click', function () {
+    navbarMenu.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+
+  // Hide the menu and overlay when any link inside the navbar is clicked
+  navbarLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      navbarMenu.classList.remove('active');
+      overlay.classList.remove('active');
     });
+  });
+});
   </script>
   
 </body>
