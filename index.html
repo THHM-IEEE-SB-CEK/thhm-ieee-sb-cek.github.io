@@ -2,109 +2,787 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THM'24</title>
-    <link rel="stylesheet" href="./css/style.css"> <!-- Link to the external CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.cdnfonts.com/css/aquire?styles=58838,58840,58839" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THM 2024</title>
+  <link rel="stylesheet" href="./css/style.css"> <!-- Link to the external CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.cdnfonts.com/css/aquire?styles=58838,58840,58839" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 
 <body>
-    <section class="hero">
-        <div class="lander">
-            <!-- Background Stroke Text -->
-            <div class="bg-text-stroke">THM</div>
+  <section class="hero" id="home">
+    <div class="lander">
+      <!-- Background Stroke Text -->
+      <div class="bg-text-stroke">THM</div>
 
-            <!-- Logo -->
-            <div class="logo">
-                <img src="./THMLOGOshadow-04-04.png" alt="Logo">
-            </div>
+      <!-- Logo -->
+      <div class="logo">
+        <img src="./THMLOGOshadow-04-04.png" alt="Logo">
+      </div>
 
-            <!-- Filled THM Text -->
-            <div class="main-text">THM</div>
+      <!-- Filled THM Text -->
+      <div class="main-text">THM</div>
 
-            <!-- Date Information -->
-            <div>
-                <hr class="date-line">
-                <div class="date-info">October</div>
-                <div class="dates">26 27</div>
-            </div>
+      <!-- Date Information -->
+      <div>
+        <hr class="date-line">
+        <div class="date-info">October</div>
+        <div class="dates">26 27</div>
+      </div>
 
-            <!-- Location Information -->
-            <div class="at">at</div>
-            <div class="location">College of Engineering Karunagappally</div>
+      <!-- Location Information -->
+      <div class="at">at</div>
+      <div class="location">College of Engineering Karunagappally</div>
 
-            <div class="thm">TRAVANCORE HUB MEET 2024</div>
-            <!-- Navbar -->
-            <nav>
-                <div class="menu-icon" id="menuToggle">&#9776;</div>
-                <ul id="navbarMenu">
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Events</li>
-                    <li>Contact</li>
-                </ul>
-                <div class="navbar-logo">
-                    <a href="#0"><img src="./THMtagline.png" alt="Navbar Logo" width="220px"></a>
-                </div>
-
-            </nav>
-
-            <!-- Black overlay -->
-            <div id="overlay" class="overlay"></div>
-            <div class="right-line"></div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#">
-                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                    </svg>
-                </a>
-            </div>
-            <div class="right-line bottom"></div>
-
-
-            <!-- Scroll Arrow -->
-            <div class="scroll-down">
-                <div class="arrow-circle">
-                    <i class="fas fa-angle-down"></i>
-                </div>
-            </div>
+      <div class="thm">TRAVANCORE HUB MEET 2024</div>
+      <!-- Navbar -->
+      <nav>
+        <div class="menu-icon" id="menuToggle">&#9776;</div>
+        <ul id="navbarMenu">
+          <a href="#home" style="text-decoration: none;">
+            <li>Home</li>
+          </a>
+          <a href="#about" style="text-decoration: none;">
+            <li>About Us</li>
+          </a>
+          <a href="#glimpses" style="text-decoration: none;">
+            <li>Glimpses</li>
+          </a>
+          <a href="#contact" style="text-decoration: none;">
+            <li>Contact Us</li>
+          </a>
+          <a href="#register" class="registration">
+            <li>Register Now!</li>
+          </a>
+        </ul>
+        <div class="navbar-logo">
+          <a href="#home" style="text-decoration: none;"><img src="./THMtagline.png" alt="Navbar Logo"
+              width="220px"></a>
         </div>
-    </section>
 
-    <script>
-        document.getElementById('menuToggle').addEventListener('click', function () {
-            var menu = document.getElementById('navbarMenu');
-            menu.classList.toggle('hidden');
+      </nav>
+
+      <!-- Black overlay -->
+      <div id="overlay" class="overlay"></div>
+      <div class="right-line"></div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/ieeeceksb"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/ieee_sb_cek"><i class="fab fa-instagram"></i></a>
+        <a href="https://in.linkedin.com/company/ieeesbcek"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://x.com/CEKIEEE">
+          <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+          </svg>
+        </a>
+      </div>
+      <div class="right-line bottom"></div>
+
+
+      <!-- Scroll Arrow -->
+      <div class="scroll-down">
+        <a href="#cards" style="text-decoration: none;">
+          <div class="arrow-circle">
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="cards" id="cards">
+    <div id="particles-js"></div>
+    <div>
+      <h3 class="cards_title">What Awaits <span>You?</span></h3>
+    </div>
+
+    <div class="card-container">
+      <!-- First Row -->
+      <div class="row">
+        <!-- First Card -->
+        <div class="card">
+          <div class="card-content">
+            <div class="card-header">
+              <img class="card-icon" src="./icons main/workshops.png" alt="Icon">
+              <h2 class="card-title">Hands on Workshops</h2>
+            </div>
+            <p class="card-description">Sharpen your technical skills through four diverse and hands-on workshops, each
+              tailored to help you gain practical knowledge in cutting-edge technologies. Whether you're a beginner or
+              an advanced learner, there's something for everyone to explore and master.</p>
+          </div>
+        </div>
+
+        <!-- Second Card -->
+        <div class="card">
+          <div class="card-content">
+            <div class="card-header">
+              <img class="card-icon" src="./icons main/cultural.png" alt="Icon">
+              <h2 class="card-title">Cultural Night
+              </h2>
+            </div>
+            <p class="card-description">Immerse yourself in an unforgettable evening of cultural performances, music,
+              and celebrations. Join us as we showcase diverse talents and traditions, bringing everyone together to
+              relax, enjoy, and connect through the beauty of culture.</p>
+          </div>
+        </div>
+
+        <!-- Third Card -->
+        <div class="card">
+          <div class="card-content">
+            <div class="card-header">
+              <img class="card-icon" src="./icons main/panel.png" alt="Icon">
+              <h2 class="card-title">Panel Discussion</h2>
+            </div>
+            <p class="card-description">Engage with industry leaders and experts in thought-provoking discussions on the
+              latest trends and challenges in the field. This is your opportunity to gain valuable insights and
+              perspectives from professionals at the forefront of innovation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="row">
+        <!-- Fourth Card -->
+        <div class="card">
+          <div class="card-content">
+            <div class="card-header">
+              <img class="card-icon" src="./icons main/technical.png" alt="Icon">
+              <h2 class="card-title">Technical Talks</h2>
+            </div>
+            <p class="card-description">Listen to experts as they delve into cutting-edge technologies and emerging
+              trends in the industry. These sessions are designed to inspire and provide valuable knowledge that can
+              help you stay ahead in the ever-evolving tech landscape.</p>
+          </div>
+        </div>
+
+        <!-- Fifth Card -->
+        <div class="card">
+          <div class="card-content">
+            <div class="card-header">
+              <img class="card-icon" src="./icons main/field.png" alt="Icon">
+              <h2 class="card-title">Field Visit</h2>
+            </div>
+            <p class="card-description">Join us for an exciting excursion to a local tourist attraction, where you can
+              unwind and explore the beauty and culture of the area. It’s the perfect opportunity to relax, connect with
+              fellow participants, and enjoy a scenic break from the sessions.</p>
+          </div>
+        </div>
+
+        <!-- Sixth Card -->
+        <div class="card">
+          <div class="card-content">
+            <div class="card-header">
+              <img class="card-icon" src="./icons main/networking.png" alt="Icon">
+              <h2 class="card-title">Networking</h2>
+            </div>
+            <p class="card-description">Connect with like-minded peers, industry professionals, and experts during
+              dedicated networking sessions. Build meaningful relationships, exchange ideas, and explore potential
+              collaborations in a relaxed and engaging environment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about" id="about">
+    <div class="card-container">
+      <div class="cards_title">
+        <h3>About <span>Us</span></h3>
+      </div>
+      <div class="about-content">
+        <img src="./aboutthm.jpg" alt="Image 1">
+        <div>
+          <h3 class="about-title">About <span>THM</span></h3>
+          <p class="about-description">THM is a hallmark event organised by IEEE Travancore Hub, set against the
+            backdrop of cutting-edge technology and vibrant community interaction. This flagship event is designed to
+            inspire and empower students under the IEEE Travancore Hub. Known for its blend of technical excellence and
+            community spirit, THM brings together over 120 participants, serving as a key platform for innovation, skill
+            development, and networking.
+            <br><br>
+            This year, IEEE THM 2024 will be hosted on the 26th and 27th of October at the College of Engineering
+            Karunagappally. The event promises an unparalleled experience with a diverse mix of technical workshops,
+            interactive sessions, and opportunities to connect with industry experts and academia. Participants will be
+            able to immerse themselves in the latest technological advancements while developing new skills.
+            <br><br>
+            Join us at THM 2024, where we will learn, innovate, and create lasting memories together. This is your
+            opportunity to be part of an exciting journey that fosters growth, creativity, and collaboration.
+          </p>
+        </div>
+      </div>
+      <div class="about-content">
+        <img src="./aboutieeesbcek.jpg" alt="Image 2">
+        <div>
+          <h3 class="about-title">About <span>IEEE SB CEK</span></h3>
+          <p class="about-description">The IEEE Student Branch at the College of Engineering, Karunagappally (CEK), has
+            consistently set benchmarks for excellence in technology and innovation. Established on May 13th, 2009, as
+            the fourth student branch in Travancore Hub, IEEE SB CEK has become one of the most dynamic branches in
+            Region 10, with 10 societies and 2 affinity groups. Its commitment to technical advancement has earned it
+            widespread recognition.
+            <br><br>
+            IEEE SB CEK holds the unique distinction of being the first and only student branch worldwide to win the
+            IEEE MGA Regional Exemplary Student Branch Award five consecutive times. The branch has also garnered
+            several prestigious awards, including the Darrel Chong Gold, Silver, and Bronze awards. CEK is globally
+            recognised for organising the first-ever IEEE student-led technical conference by undergraduate students and
+            has made an impact internaltionally through the IEEE International Power and Renewable Energy Conference
+            (IPRECON) and the nationally acclaimed LUXATHON hackathon.
+            <br><br>
+            As one of the oldest and most respected student branches in the Kerala section, IEEE SB CEK continues to
+            raise the bar for student-led innovation and global recognition, securing its legacy as a powerhouse in the
+            technology space.
+          </p>
+        </div>
+      </div>
+      <div class="about-content">
+        <img src="./cek.png" alt="Image 3">
+        <div>
+          <h3 class="about-title">About <span>CEK</span></h3>
+          <p class="about-description">The Government College of Engineering Karunagappally (CEK) is a public institute
+            of engineering and technology, located in the north-west of Kollam district, Kerala. Established in 1999 by
+            the Government of Kerala, CEK is the second engineering college in Kollam district and the fourth under the
+            Institute of Human Resources Development (IHRD), previously known as the Institute of Human Resources
+            Development in Electronics (IHRDE).
+            <br><br>
+            CEK is affiliated with A P J Abdul Kalam Technological University (since 2015), recognized by the All India
+            Council for Technical Education (AICTE), and accredited by the National Board of Accreditation (NBA).
+            Previously affiliated with Cochin University of Science and Technology (CUSAT) until 2014, CEK stands as the
+            largest campus among IHRD institutions and has received support from the World Bank under the Government of
+            India’s TEQIP Programme since 2012.
+            <br><br>
+            The college offers a range of undergraduate, postgraduate, and PhD programs across various engineering
+            disciplines, continually pushing the boundaries of academic and technical excellence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="carousel" id="carousel">
+    <div class="container-fluid">
+      <div class="cards_title">
+        <h3>Our <span>Supporters</span></h3>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="news-slider" class="owl-carousel">
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="./carousel images/IEEE RECT.png" alt="">
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="./carousel images/SB RECT.png" alt="">
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="./carousel images/KS RECT.png" alt="">
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="./carousel images/College RECT.png" alt="">
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="./carousel images/LINK RECT.png" alt="">
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="./carousel images/THUB RECT.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tickets" id="register">
+    <div class="container">
+      <div class="cards_title">
+        <h3>Register<span> Now</span></h3>
+      </div>
+      <div class="row">
+        <!-- First Column -->
+        <div class="column ticket">
+          <img src="./ticket1.png" alt="Image 1" class="column-image">
+          <h2 class="column-title">IEEE <span>MEMBER</span></h2>
+          <h3 class="column-subtitle">₹1000</h3>
+          <ul class="column-list">
+            <li><i class="fa-regular fa-circle-check"></i> IEEE Member Discount & Benefits</li>
+            <li><i class="fa-regular fa-circle-check"></i> Entry to Sessions & Workshops</li>
+            <li><i class="fa-regular fa-circle-check"></i> Network Opportunity</li>
+            <li><i class="fa-regular fa-circle-check"></i> Food & Accommodation</li>
+            <li><i class="fa-regular fa-circle-check"></i> Entry to Field Visit & Culturals</li>
+            <li><i class="fa-regular fa-circle-check"></i> IEEE Swags & Many More...</li>
+          </ul>
+          <div class="column-button-container">
+            <a href="#0" class="column-button">Coming Soon!</a>
+          </div>
+        </div>
+
+        <!-- Second Column -->
+        <div class="column ticket">
+          <img src="./ticket2.png" alt="Image 2" class="column-image">
+          <h2 class="column-title">NON IEEE <span>MEMBER</span></h2>
+          <h3 class="column-subtitle">₹1300</h3>
+          <ul class="column-list">
+            <li class="wrong"><i class="fa-regular fa-circle-xmark"></i> IEEE Member Discount & Benefits</li>
+            <li><i class="fa-regular fa-circle-check"></i> Entry to Sessions & Workshops</li>
+            <li><i class="fa-regular fa-circle-check"></i> Network Opportunity</li>
+            <li><i class="fa-regular fa-circle-check"></i> Food & Accommodation</li>
+            <li><i class="fa-regular fa-circle-check"></i> Entry to Field Visit & Culturals</li>
+            <li><i class="fa-regular fa-circle-check"></i> IEEE Swags & Many More...</li>
+          </ul>
+          <div class="column-button-container">
+            <a href="#0" class="column-button">Coming Soon!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="glimpses">
+    <div class="cards_title">
+      <h3>Event<span> Chronicles</span></h3>
+    </div>
+    <div class="album">
+      <div class="responsive-container-block bg">
+        <div class="responsive-container-block img-cont">
+          <img class="img" src="./gallery/T1.png">
+          <img class="img" src="./gallery/Screenshot 2024-10-09 193013.png">
+          <img class="img img-last" src="./gallery/DSC00126.JPG">
+        </div>
+        <div class="responsive-container-block img-cont">
+          <img class="img img-big" src="./gallery/T3.png">
+          <img class="img img-big" src="./gallery/Screenshot 2024-10-09 194059.png">
+          <img class="img img-big img-last" src="./gallery/T4.png">
+        </div>
+        <div class="responsive-container-block img-cont">
+          <img class="img" src="./gallery/IMG.jpg">
+          <img class="img" src="./gallery/8.jpg">
+          <img class="img" src="./gallery/T2.png">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="card-wrapper content-cc">
+        <div class="faq-card">
+          <div class="faq-ilustrations">
+
+          </div>
+          <main class="faq-content">
+            <div class="cards_title">
+              <h3>Frequently<span> Asked</span> Questions</h3>
+            </div>
+            <div class="faq-articles">
+
+              <article class="faq-accordion">
+                <input type="checkbox" class="tgg-title" id="tgg-title-1">
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-1">
+                    <img class="icon" style="fill: white !important;" src="./65ab680235f54631f8e1eacd.svg" alt="Icon">
+                    <h2>
+                      What is THM?
+                    </h2>
+                    <span class="arrow-icon">
+                      <img src="./icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+                <div class="faq-accordion-content">
+                  <p>Travancore Hub Meet (THM) is the flagship annual event organized by the IEEE Travancore Hub. It
+                    brings together over 120 participants, providing a platform for networking, innovation, and skill
+                    development. This event is known for its blend of technical excellence and community spirit,
+                    inspiring and empowering students under the IEEE Travancore Hub.
+                  </p>
+                </div>
+              </article> <!-- faq accordion -->
+
+              <article class="faq-accordion">
+                <input type="checkbox" class="tgg-title" id="tgg-title-2">
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-2">
+                    <img class="icon" src="./65ab680235f54631f8e1eacd.svg" alt="Icon">
+                    <h2>
+                      When and where is THM 2024 taking place?
+                    </h2>
+                    <span class="arrow-icon">
+                      <img src="./icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+                <div class="faq-accordion-content">
+                  <p>THM 2024 will be held on the 26th and 27th of October at the College of Engineering Karunagappally.
+                    The event promises an engaging experience with technical workshops, interactive sessions, and
+                    networking opportunities.</p>
+                </div>
+              </article> <!-- faq accordion -->
+
+              <article class="faq-accordion">
+                <input class="tgg-title" type="checkbox" id="tgg-title-3">
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-3">
+                    <img class="icon" src="./65ab680235f54631f8e1eacd.svg" alt="Icon">
+                    <h2>
+                      What can participants expect from THM 2024?
+                    </h2>
+                    <span class="arrow-icon">
+                      <img src="./icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+                <div class="faq-accordion-content">
+                  <p>Participants at THM 2024 can expect an enriching experience that includes hands-on technical
+                    workshops, interactive sessions with industry experts, and opportunities to connect with academia.
+                    The event aims to foster learning, innovation, and collaboration among students in the
+                    field of technology.</p>
+                </div>
+              </article> <!-- faq accordion -->
+
+              <article class="faq-accordion">
+                <input class="tgg-title" type="checkbox" id="tgg-title-4">
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-4">
+                    <img class="icon" src="./65ab680235f54631f8e1eacd.svg" alt="Icon">
+                    <h2>
+                      Do I need to register separately for the workshop?
+                    </h2>
+                    <span class="arrow-icon">
+                      <img src="./icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+                <div class="faq-accordion-content">
+                  <p>No, a single THM registration covers workshop registrations as well. Separate registration
+                    is not required.</p>
+                </div>
+              </article> <!-- faq accordion -->
+
+              <article class="faq-accordion">
+                <input class="tgg-title" type="checkbox" id="tgg-title-5">
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-5">
+                    <img class="icon" src="./65ab680235f54631f8e1eacd.svg" alt="Icon">
+                    <h2>
+                      Are food and accommodation included?
+                    </h2>
+                    <span class="arrow-icon">
+                      <img src="./icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+                <div class="faq-accordion-content">
+                  <p>Yes, both food and accommodation will be provided for all participants.</p>
+                </div>
+              </article>
+
+              <article class="faq-accordion">
+                <input class="tgg-title" type="checkbox" id="tgg-title-6">
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-6">
+                    <img class="icon" src="./65ab680235f54631f8e1eacd.svg" alt="Icon">
+                    <h2>
+                      How will I receive confirmation of my registration?
+                    </h2>
+                    <span class="arrow-icon">
+                      <img src="./icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+                <div class="faq-accordion-content">
+                  <p>After registering for THM 2024, you will receive a confirmation email. Within a few days, you will
+                    also receive an invitation to join a WhatsApp group for event updates. If you don’t receive the
+                    email within a few days, please contact the event organizers.</p>
+                </div>
+              </article>
+
+              <article class="faq-accordion">
+                <input class="tgg-title" type="checkbox" id="tgg-title-7">
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-7">
+                    <img class="icon" src="./65ab680235f54631f8e1eacd.svg" alt="Icon">
+                    <h2>
+                      Who can I contact for further details?
+                    </h2>
+                    <span class="arrow-icon">
+                      <img src="./icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+                <div class="faq-accordion-content">
+                  <p>For any specific queries related to the event, you can reach out to the IEEE Travancore Hub Team or
+                    IEEE SB CEK. You can email your questions to sbcek@ieee.org, and detailed contact information is
+                    also available on the official event website and
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-accordion">
+                <input class="tgg-title" type="checkbox" id="tgg-title-8">
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-8">
+                    <img class="icon" src="./65ab680235f54631f8e1eacd.svg" alt="Icon">
+                    <h2>
+                      How do I select my desired workshop?
+                    </h2>
+                    <span class="arrow-icon">
+                      <img src="./icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+                <div class="faq-accordion-content">
+                  <p>You will receive an email to select your preferred workshop after the registration process is
+                    completed.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-accordion">
+                <input class="tgg-title" type="checkbox" id="tgg-title-9">
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-9">
+                    <img class="icon" src="./65ab680235f54631f8e1eacd.svg" alt="Icon">
+                    <h2>
+                      What payment methods are available for purchasing event tickets?
+                    </h2>
+                    <span class="arrow-icon">
+                      <img src="./icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+                <div class="faq-accordion-content">
+                  <p>All standard payment methods are available, including UPI, credit card, and other common payment
+                    options.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-accordion">
+                <input class="tgg-title" type="checkbox" id="tgg-title-9">
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-9">
+                    <img class="icon" src="./65ab680235f54631f8e1eacd.svg" alt="Icon">
+                    <h2>
+                      Is my ticket refundable if I cancel?
+                    </h2>
+                    <span class="arrow-icon">
+                      <img src="./icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+                <div class="faq-accordion-content">
+                  <p>No, tickets are non-refundable. Once purchased, you will not receive a refund for cancellations.
+                  </p>
+                </div>
+              </article><!-- faq accordion -->
+
+            </div> <!-- faq articles -->
+          </main> <!-- faq -->
+        </div> <!-- faq card -->
+      </div> <!-- card wrapper -->
+    </div>
+
+  </section>
+  <!-- FOOTER-->
+
+  <footer id="contact">
+    <hr>
+    <div class="container" style="max-width: 1500px;">
+      <div class="footer-cards">
+        <!-- Menu Section -->
+        <div class="footer-card menu">
+          <h3 class="footer-title">MENU</h3>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#register">Register Now</a></li>
+            <li><a href="#cards">What Await's You?</a></li>
+            <li><a href="#carousel">Our Supporters</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+          <h3 style="margin-top: 20px;" class="footer-title">FOLLOW US</h3>
+          <div class="socials">
+            <a href="https://www.facebook.com/ieeeceksb"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ieee_sb_cek"><i class="fab fa-instagram"></i></a>
+            <a href="https://in.linkedin.com/company/ieeesbcek"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/CEKIEEE">
+              <svg class="social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Map Section -->
+        <div class="footer-card map">
+          <iframe
+            src="https://www.google.com/maps/embed/v1/place?q=IHRD+College+of+Engineering&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+            width="100%" height="310" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-card contact">
+          <h3 class="footer-title">CONTACT US</h3>
+          <p><i class="fa fa-envelope"></i> sbcek@ieee.org</p>
+          <p><i class="fa fa-phone"></i> Shifali: <a href="tel:+919037106580">+91 9037106580</a></p>
+          <p><i class="fa fa-phone"></i> Amina: <a href="tel:+918281557060">+91 8281557060</a></p>
+          <h3 class="footer-title" style="margin-top: 20px;">Address</h3>
+          <div class="address">
+            <p><strong>IEEE SB CEK</strong></p>
+            <p>College of Engineering Karunagappally</p>
+            <p>Engineering College Rd, Thodiyoor PO</p>
+            <p>Karunagappally, Kollam</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with <i class="fa-regular fa-heart"></i> IEEE SB CEK © 2024</p>
+    </div>
+  </footer>
+
+
+
+
+  <script>
+    document.querySelectorAll('.faq-accordion input.tgg-title').forEach(item => {
+      item.addEventListener('change', function () {
+        // Close other FAQ accordions
+        document.querySelectorAll('.faq-accordion input.tgg-title').forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.checked = false; // Collapse others
+          }
         });
-    </script>
-    <script>
-        document.getElementById('menuToggle').addEventListener('click', function () {
-            var menu = document.getElementById('navbarMenu');
-            var overlay = document.getElementById('overlay');
+      });
+    });
+  </script>
 
-            // Toggle the visibility of the menu and the overlay
-            menu.classList.toggle('active');
-            overlay.classList.toggle('active');
-        });
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    const cards = document.querySelectorAll('.card'); // Select all cards
 
-        // Optional: Close the menu when clicking outside the menu (on the overlay)
-        document.getElementById('overlay').addEventListener('click', function () {
-            var menu = document.getElementById('navbarMenu');
-            var overlay = document.getElementById('overlay');
+    cards.forEach(card => {
+      let isMouseOver = false;
+      let rotateX = 0;
+      let rotateY = 0;
 
-            // Remove the 'active' class to hide the menu and overlay
-            menu.classList.remove('active');
-            overlay.classList.remove('active');
-        });
-    </script>
+      function lerp(start, end, t) {
+        return start * (1 - t) + end * t;
+      }
 
+      function clamp(value, min, max) {
+        return Math.min(Math.max(value, min), max);
+      }
 
+      function updateCardTransform() {
+        const transformString = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        card.style.transform = transformString;
+      }
+
+      function animate() {
+        if (!isMouseOver) {
+          rotateX = lerp(rotateX, 0, 0.05);
+          rotateY = lerp(rotateY, 0, 0.05);
+        }
+
+        updateCardTransform();
+        requestAnimationFrame(animate);
+      }
+
+      card.addEventListener('mousemove', (e) => {
+        if (!isMouseOver) return;
+
+        const rect = card.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        const mouseX = e.clientX - centerX;
+        const mouseY = e.clientY - centerY;
+
+        rotateY = clamp(mouseX / 10, -15, 15);
+        rotateX = clamp(-mouseY / 10, -15, 15);
+      });
+
+      card.addEventListener('mouseenter', () => {
+        isMouseOver = true;
+        card.style.transition = 'none';
+      });
+
+      card.addEventListener('mouseleave', () => {
+        isMouseOver = false;
+        card.style.transition = 'transform 0.6s';
+      });
+
+      animate();
+    });
+
+  </script>
+  <script>
+    window.addEventListener('scroll', function () {
+      var nav = document.querySelector('nav');
+      var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+      // Check if user has scrolled more than 100px (adjust as needed)
+      if (scrollPosition > 200) {
+        nav.style.position = 'fixed';
+        nav.style.top = '0';
+        nav.style.padding = '10px 5%';
+        nav.style.width = '100%';
+        nav.style.backgroundColor = 'rgba(0, 0, 0, 1)'; // Optional: Add background when sticky
+        nav.style.zIndex = '1000'; // Ensure it's above other content
+      } else {
+        // Reset the nav position when scroll is less than 100px
+        nav.style.position = 'absolute';
+        nav.style.top = '5%';
+        nav.style.backgroundColor = 'transparent'; // Return to initial background (if any)
+      }
+    });
+  </script>
+  <!-- Removed duplicate script imports -->
+  <!-- Owl Carousel JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#news-slider").owlCarousel({
+        items: 4,
+        loop: true, // Enable continuous loop
+        margin: 20,
+        nav: true, // Show navigation arrows
+        navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"], // Custom navigation icons
+        autoplay: true, // Enable autoplay
+        autoplayTimeout: 3000, // Autoplay interval in milliseconds (3 seconds in this example)
+        responsive: {
+          0: {
+            items: 3
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 4
+          }
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

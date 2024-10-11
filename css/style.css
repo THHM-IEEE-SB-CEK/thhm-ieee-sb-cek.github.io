@@ -4,723 +4,1781 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body,
 html {
-    height: 100%;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
+  height: 100%;
+  font-family: Arial, sans-serif;
 }
 
 
 .hero {
-    background: linear-gradient(135deg, #181717, #3b3a3a);
-    overflow: hidden;
-    height: 100%;
+  background: linear-gradient(180deg, #3b3a3a, #181717);
+  overflow: hidden;
+  height: 100%;
+  z-index: 1;
 }
 
 .container {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .lander {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 /* Background Stroke Text */
 .bg-text-stroke {
-    position: absolute;
-    font-size: 25vw;
-    left: 10vw;
-    height: 0.2%;
-    top: 38%;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(122, 119, 119, 0.356);
-    opacity: 0;
-    animation: fadeInLeft 1s forwards;
-    font-family: 'Aquire', sans-serif;
-    /* Apply Aquire Bold font */
-    font-weight: 700;
-    /* Ensure bold weight is applied */
-    letter-spacing: 25px !important;
-    transform: scaleX(1);
-    transform-origin: left center;
-    font-stretch: expanded;
+  position: absolute;
+  font-size: 25vw;
+  left: 10vw;
+  height: 0.2%;
+  top: 38%;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(122, 119, 119, 0.356);
+  opacity: 0;
+  animation: fadeInLeft 1s forwards;
+  font-family: 'Aquire', sans-serif;
+  /* Apply Aquire Bold font */
+  font-weight: 700;
+  /* Ensure bold weight is applied */
+  letter-spacing: 25px !important;
+  transform: scaleX(1);
+  transform-origin: left center;
+  font-stretch: expanded;
 }
 
 /* Logo */
 .logo {
-    position: absolute;
-    top: 5vh;
-    left: -19.85vw;
-    opacity: 0;
-    animation: fadeInRight 1s forwards;
+  position: absolute;
+  top: 5vh;
+  left: -19.85vw;
+  opacity: 0;
+  animation: fadeInRight 1s forwards;
 }
 
 .logo img {
-    width: 48vw;
+  width: 48vw;
 }
 
 /* Filled THM Text */
 .main-text {
-    position: absolute;
-    font-size: 14vw;
-    color: white;
-    top: 53vh;
-    left: 19.5vw;
-    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
-    opacity: 0;
-    animation: fadeInDrop 1.5s forwards 1s;
-    font-family: 'Aquire', sans-serif;
-    /* Apply Aquire Bold font */
-    font-weight: 700;
-    /* Ensure bold weight is applied */
-    letter-spacing: 25px !important;
+  position: absolute;
+  font-size: 14vw;
+  color: white;
+  top: 53vh;
+  left: 19.5vw;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  animation: fadeInDrop 1.5s forwards 1s;
+  font-family: 'Aquire', sans-serif;
+  /* Apply Aquire Bold font */
+  font-weight: 700;
+  /* Ensure bold weight is applied */
+  letter-spacing: 25px !important;
 }
 
 /* Date and Location Information */
 .date-info {
-    position: absolute;
-    top: 15vh;
-    right: 40vw;
-    font-size: 3rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    text-align: center;
-    color: #ffffff;
-    opacity: 0;
-    animation: fadeInDrop 1s forwards 1.5s;
+  position: absolute;
+  top: 15vh;
+  right: 40vw;
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
+  animation: fadeInDrop 1s forwards 1.5s;
 }
 
 .dates {
-    position: absolute;
-    top: 21vh;
-    right: 28vw;
-    font-size: 3.8rem;
-    font-family: 'Aquire', sans-serif;
-    /* Apply Aquire Bold font */
-    font-weight: 700;
-    /* Ensure bold weight is applied */
-    text-align: center;
-    color: #ff9933;
-    opacity: 0;
-    animation: fadeInDrop 1s forwards 1.7s;
+  position: absolute;
+  top: 23vh;
+  right: 28vw;
+  font-size: 3.8rem;
+  font-family: 'Aquire', sans-serif;
+  /* Apply Aquire Bold font */
+  font-weight: 700;
+  /* Ensure bold weight is applied */
+  text-align: center;
+  color: #ff9933;
+  opacity: 0;
+  animation: fadeInDrop 1s forwards 1.7s;
 }
 
 .location {
-    position: absolute;
-    top: 35vh;
-    right: 35vw;
-    font-size: 1.8vw;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
-    color: white;
-    opacity: 0;
-    animation: fadeInDrop 1s forwards 1.7s;
+  position: absolute;
+  top: 35vh;
+  right: 35vw;
+  font-size: 1.8vw;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+  color: white;
+  opacity: 0;
+  animation: fadeInDrop 1s forwards 1.7s;
 }
 
 .at {
-    position: absolute;
-    top: 23vh;
-    left: 26.25vw;
-    font-size: 7.5vw;
-    text-align: center;
-    font-family: 'Berdiolla', sans-serif;
-    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
-    color: #ff9933;
-    opacity: 0;
-    animation: fadeInDrop 1s forwards 1.7s;
+  position: absolute;
+  top: 23vh;
+  left: 26.25vw;
+  font-size: 7.5vw;
+  text-align: center;
+  font-family: 'Berdiolla', sans-serif;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+  color: #ff9933;
+  opacity: 0;
+  animation: fadeInDrop 1s forwards 1.7s;
 }
 
 .thm {
-    position: absolute;
-    top: 81vh;
-    left: 20.5vw;
-    font-size: 2vw;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
-    color: white;
-    opacity: 0;
-    animation: fadeInDrop 1s forwards 1.7s;
+  position: absolute;
+  top: 81vh;
+  left: 20.5vw;
+  font-size: 2vw;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+  color: white;
+  opacity: 0;
+  animation: fadeInDrop 1s forwards 1.7s;
 }
 
 /* Date Line */
 .date-line {
-    position: absolute;
-    top: 19.75vh;
-    right: 28.5vw;
-    width: 160px;
-    border: 1px solid #ffffff;
-    opacity: 0;
-    animation: fadeInDrop 1s forwards 1.7s;
+  position: absolute;
+  top: 19.75vh;
+  right: 28.5vw;
+  width: 160px;
+  border: 1px solid #ffffff;
+  opacity: 0;
+  animation: fadeInDrop 1s forwards 1.7s;
 }
 
 /* Navbar */
 nav {
-    position: absolute;
-    top: 5%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
-    opacity: 0;
-    animation: fadeInDrop 1s forwards 1.7s;
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+  opacity: 0;
+  animation: fadeInDrop 1s forwards 1.7s;
 }
 
 nav .menu-icon {
-    font-size: 1.2vw;
-    cursor: pointer;
-    color: white;
-    margin-right: 30px;
+  font-size: 1.2vw;
+  cursor: pointer;
+  color: white;
+  margin-right: 30px;
+  margin-top: -5px;
 }
 
 nav .menu-icon:hover {
-    color: #ff9933;
+  color: #ff9933;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 15px 0 5px;
+  padding: 0;
 }
 
 nav ul li {
-    font-size: 1.2vw;
-    color: white;
-    cursor: pointer;
+  font-size: 1.2vw;
+  color: white;
+  cursor: pointer;
 }
 
 nav ul li:hover {
-    color: #ff9933;
+  color: #ff9933;
 }
 
 /* Navbar Logo */
 .navbar-logo {
-    margin-left: auto;
-    max-height: 80px;
+  margin-left: auto;
+  max-height: 80px;
 }
 
+.registration{
+  text-decoration: none;
+  background: #ff9933;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-top: -10px;
+}
+
+
+
+.registration:hover{
+  background: transparent;
+  border: 2px solid #ff9933;
+}
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 
 /* Right-Side Line with Icons */
 .right-line {
-    position: absolute;
-    right: 2%;
-    top: 0;
-    height: 58vh;
-    /* Adjusted height to leave space for the social icons */
-    width: 2px;
-    background-color: rgba(255, 255, 255, 0.4);
-    opacity: 0;
-    animation: fadeInLeft 1.5s forwards 2s;
+  position: absolute;
+  right: 2%;
+  top: 0;
+  height: 58vh;
+  /* Adjusted height to leave space for the social icons */
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  animation: fadeInLeft 1.5s forwards 2s;
 }
 
 .right-line.bottom {
-    top: auto;
-    bottom: 0;
-    height: 15vh;
-    /* Same height, bottom half */
-    opacity: 0;
-    animation: fadeInLeft 1.5s forwards 2s;
+  top: auto;
+  bottom: 0;
+  height: 15vh;
+  /* Same height, bottom half */
+  opacity: 0;
+  animation: fadeInLeft 1.5s forwards 2s;
 }
 
 .social-icons {
-    position: absolute;
-    right: 1.5vw;
-    top: 61.5vh;
-    /* This aligns the icons in the "gap" of the line */
-    display: flex;
-    ;
-    flex-direction: column;
-    gap: 25px;
-    opacity: 0;
-    animation: fadeInLeft 1.5s forwards 2.2s;
+  position: absolute;
+  right: 1.5vw;
+  top: 61.5vh;
+  /* This aligns the icons in the "gap" of the line */
+  display: flex;
+  ;
+  flex-direction: column;
+  gap: 25px;
+  opacity: 0;
+  animation: fadeInLeft 1.5s forwards 2.2s;
 }
 
 .social-icons a {
-    color: white;
-    font-size: 1.1vw;
-    /* Set the base font size for icons */
-    text-decoration: none;
-    transition: color 0.3s ease, font-size 0.3s ease;
-    /* Smooth hover effect */
+  color: white;
+  font-size: 1.1vw;
+  /* Set the base font size for icons */
+  text-decoration: none;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  /* Smooth hover effect */
 }
 
 /* Ensure SVG has the same size as font-awesome icons */
 .social-icons .social-icon {
-    width: 1.1vw;
-    /* Match the width to font-size */
-    height: auto;
-    /* Maintain aspect ratio */
-    fill: white;
-    transition: fill 0.3s ease;
-    /* Smooth transition for hover effect */
+  width: 1.1vw;
+  /* Match the width to font-size */
+  height: auto;
+  /* Maintain aspect ratio */
+  fill: white;
+  transition: fill 0.3s ease;
+  /* Smooth transition for hover effect */
 }
 
 /* Change font size and color on hover for Font Awesome icons */
 .social-icons a:hover {
-    color: #ff9933;
-    /* Slight increase on hover */
-    text-decoration: none;
+  color: #ff9933;
+  /* Slight increase on hover */
+  text-decoration: none;
 }
 
 /* Hover effect for SVG icons */
 .social-icons a:hover .social-icon path {
-    fill: #ff9933;
-    /* Change to orange with transparency on hover */
+  fill: #ff9933;
+  /* Change to orange with transparency on hover */
 }
 
 /* Scroll Arrow with Circle */
 .scroll-down {
-    position: absolute;
-    bottom: 2%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  bottom: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .scroll-down .arrow-circle {
-    width: 2.5vw;
-    /* Equal width and height */
-    height: 2.5vw;
-    font-size: 1.5vw;
-    color: #ff9933;
-    /* Initial color of the arrow */
-    border: 2px solid white;
-    border-radius: 50%;
-    /* Creates the circle */
-    opacity: 0;
-    animation: fadeInArrow 1.5s forwards 2.5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Center the arrow inside the circle */
-    transition: background-color 0.3s, color 0.3s;
-    /* Smooth transition for color and background */
+  width: 2.5vw;
+  /* Equal width and height */
+  height: 2.5vw;
+  font-size: 1.5vw;
+  color: #ff9933;
+  /* Initial color of the arrow */
+  border: 2px solid white;
+  border-radius: 50%;
+  /* Creates the circle */
+  opacity: 0;
+  animation: fadeInArrow 1.5s forwards 2.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Center the arrow inside the circle */
+  transition: background-color 0.3s, color 0.3s;
+  /* Smooth transition for color and background */
 }
 
 /* Hover effect for arrow-circle */
 .scroll-down .arrow-circle:hover {
-    background-color: #ff9933;
-    /* Solid orange background */
-    color: white;
-    /* Arrow color changes to white */
-    border-color: #ff9933;
-    /* Border color changes to match the background */
+  background-color: #ff9933;
+  /* Solid orange background */
+  color: white;
+  /* Arrow color changes to white */
+  border-color: #ff9933;
+  /* Border color changes to match the background */
 }
 
 .scroll-down .arrow-circle i {
-    animation: bounce 1.5s infinite ease-in-out;
+  animation: bounce 1.5s infinite ease-in-out;
 }
+
+
+
+/* CARDS SECTION */
+
+.cards {
+  background: linear-gradient(to bottom, #181717, #000000);
+  padding: 75px 0 30px;
+  z-index: 1;
+  position: relative;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 1;
+}
+
+.cards_title {
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  padding: 80px 0 40px;
+  font-family: 'montserrat', sans-serif;
+  /* Apply Aquire Bold font */
+  font-weight: 700;
+}
+
+.cards_title span {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 153, 51, 1);
+}
+
+.card-container {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh 5vw;
+  /* Adjust padding for sides and top/bottom */
+  position: relative;
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  /* Ensure cards are spaced evenly */
+  width: 100%;
+  margin-bottom: 40px;
+  /* Add space between rows */
+}
+
+.card {
+  width: 400px;
+  height: 240px;
+  background: #000000;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 153, 51, 0.3);
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  position: relative;
+  margin: 0 15px;
+  /* Space between cards */
+  padding: 15px 0;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 153, 51, 0.1), transparent);
+  transform: translateY(-100%);
+  transition: transform 0.6s;
+}
+
+.card:hover::before {
+  transform: translateY(100%);
+}
+
+.card-content {
+  padding: 20px;
+  transform-style: preserve-3d;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  transform: translateZ(50px);
+  color: #ff9933;
+}
+
+.card-description {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+  transform: translateZ(30px);
+  text-align: justify;
+}
+
+
+
+.about {
+  background: #000000;
+  padding: 50px 0 30px;
+  z-index: 1;
+  position: relative;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  /* Background color for the cards */
+  border-radius: 15px;
+  /* Rounded corners */
+  padding: 40px;
+  margin-bottom: 50px;
+  width: 100%;
+  box-shadow: 15px 15px 20px rgba(255, 153, 51, 0.1);
+}
+
+/* Alternate flex direction for every other card */
+.about-content:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.about-title span {
+  color: rgba(255, 153, 51, 1);
+}
+
+.about-content img {
+  width: 40%;
+  border-radius: 10px;
+  margin-right: 55px;
+  margin-top: 40px;
+  ;
+}
+
+.about-content:nth-child(even) img {
+  margin-right: 0;
+  margin-left: 55px;
+}
+
+.about-content .about-title {
+  font-size: 2rem;
+  color: white;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.about-content .about-description {
+  font-size: 1rem;
+  color: white;
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+.carousel {
+  background: #000000;
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  /* Ensure it's correctly positioned */
+  overflow: hidden;
+  /* Prevent hiding of elements */
+  z-index: 1;
+  /* Ensure it's above other content */
+}
+
+.owl-nav {
+  display: none;
+}
+
+
+
+.tickets {
+  padding: 65px 0;
+  background-color: #000000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.column {
+  flex: 1;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.ticket {
+  background-color: #1c1c1c;
+  /* Background color for the cards */
+  box-shadow: 15px 15px 20px rgba(255, 153, 51, 0.1);
+}
+
+.column-image {
+  max-width: 65%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin: 10px auto 20px;
+}
+
+.column-title {
+  font-size: 1.5rem;
+  color: rgba(255, 153, 51, 1);
+  font-family: 'montserrat', sans-serif;
+  /* Apply Aquire Bold font */
+  font-weight: 700;
+  /* Ensure bold weight is applied */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.column-title span {
+  color: #ffffff;
+}
+
+.column-subtitle {
+  font-size: 1.5rem;
+  color: #d6cfcf;
+  margin-bottom: 20px;
+}
+
+.column-list {
+  list-style: none;
+  /* Remove default bullets */
+  padding-left: 0;
+  margin-top: 35px;
+}
+
+.column-list li {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.column-list li i {
+  color: #28a745;
+  /* Green color for the tick */
+  margin-right: 10px;
+  /* Space between the icon and text */
+  font-size: 1.2rem;
+}
+
+.wrong {
+  color: #6b6b6b !important;
+}
+
+.wrong i {
+  color: #dc3545 !important;
+  /* Red color for the cross */
+}
+
+
+
+.column-button-container {
+  text-align: center;
+}
+
+.column-button {
+  display: inline-block;
+  background-color: #ff9933;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  margin-top: 25px;
+}
+
+.column-button:hover {
+  background-color: transparent;
+  border: 2px solid #ff9933;
+}
+
+
+/* Gallery Section Styles */
+.gallery,
+.faq {
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 10px;
+  background: #000000;
+}
+
+.album {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.album .responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.album .responsive-container-block.bg {
+  max-width: 1320px;
+  margin: 0 0 0 0;
+  justify-content: space-between;
+}
+
+.album .img {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+.album #i9rb {
+  color: black;
+}
+
+.album #ir6i {
+  color: black;
+}
+
+.album #ikz3b {
+  color: black;
+}
+
+.album .responsive-container-block.img-cont {
+  flex-direction: column;
+  max-width: 33.3%;
+  min-height: auto;
+  margin: 0 0 0 0;
+  height: 100%;
+}
+
+.album #ipix {
+  color: black;
+}
+
+.album #ipzoh {
+  color: black;
+}
+
+.album #ig5q8 {
+  color: black;
+}
+
+.album #imtzl {
+  color: black;
+}
+
+.album #i53es {
+  color: black;
+}
+
+.album .img.img-big {
+  height: 50%;
+  margin: 0 0 16px 0;
+}
+
+@media (max-width: 1024px) {
+  .album .img {
+    margin: 0 0 18px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .album .img {
+    max-width: 32.5%;
+    margin: 0 0 0 0;
+  }
+
+  .album .responsive-container-block.bg {
+    flex-direction: column;
+  }
+
+  .album .responsive-container-block.img-cont {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .album .img.img-big {
+    max-width: 49%;
+    margin: 0 0 0 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .album .img {
+    max-width: 94%;
+    margin: 0 0 25px 0;
+  }
+
+  .album .responsive-container-block.img-cont {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .album .img.img-big {
+    max-width: 94%;
+    margin: 0 0 25px 0;
+  }
+
+  .album .img.img-last {
+    margin: 0 0 5px 0;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap");
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wk-desk-1 {
+  width: 8.333333%;
+}
+
+.wk-desk-2 {
+  width: 16.666667%;
+}
+
+.wk-desk-3 {
+  width: 25%;
+}
+
+.wk-desk-4 {
+  width: 33.333333%;
+}
+
+.wk-desk-5 {
+  width: 41.666667%;
+}
+
+.wk-desk-6 {
+  width: 50%;
+}
+
+.wk-desk-7 {
+  width: 58.333333%;
+}
+
+.wk-desk-8 {
+  width: 66.666667%;
+}
+
+.wk-desk-9 {
+  width: 75%;
+}
+
+.wk-desk-10 {
+  width: 83.333333%;
+}
+
+.wk-desk-11 {
+  width: 91.666667%;
+}
+
+.wk-desk-12 {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .wk-ipadp-1 {
+    width: 8.333333%;
+  }
+
+  .wk-ipadp-2 {
+    width: 16.666667%;
+  }
+
+  .wk-ipadp-3 {
+    width: 25%;
+  }
+
+  .wk-ipadp-4 {
+    width: 33.333333%;
+  }
+
+  .wk-ipadp-5 {
+    width: 41.666667%;
+  }
+
+  .wk-ipadp-6 {
+    width: 50%;
+  }
+
+  .wk-ipadp-7 {
+    width: 58.333333%;
+  }
+
+  .wk-ipadp-8 {
+    width: 66.666667%;
+  }
+
+  .wk-ipadp-9 {
+    width: 75%;
+  }
+
+  .wk-ipadp-10 {
+    width: 83.333333%;
+  }
+
+  .wk-ipadp-11 {
+    width: 91.666667%;
+  }
+
+  .wk-ipadp-12 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wk-tab-1 {
+    width: 8.333333%;
+  }
+
+  .wk-tab-2 {
+    width: 16.666667%;
+  }
+
+  .wk-tab-3 {
+    width: 25%;
+  }
+
+  .wk-tab-4 {
+    width: 33.333333%;
+  }
+
+  .wk-tab-5 {
+    width: 41.666667%;
+  }
+
+  .wk-tab-6 {
+    width: 50%;
+  }
+
+  .wk-tab-7 {
+    width: 58.333333%;
+  }
+
+  .wk-tab-8 {
+    width: 66.666667%;
+  }
+
+  .wk-tab-9 {
+    width: 75%;
+  }
+
+  .wk-tab-10 {
+    width: 83.333333%;
+  }
+
+  .wk-tab-11 {
+    width: 91.666667%;
+  }
+
+  .wk-tab-12 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .wk-mobile-1 {
+    width: 8.333333%;
+  }
+
+  .wk-mobile-2 {
+    width: 16.666667%;
+  }
+
+  .wk-mobile-3 {
+    width: 25%;
+  }
+
+  .wk-mobile-4 {
+    width: 33.333333%;
+  }
+
+  .wk-mobile-5 {
+    width: 41.666667%;
+  }
+
+  .wk-mobile-6 {
+    width: 50%;
+  }
+
+  .wk-mobile-7 {
+    width: 58.333333%;
+  }
+
+  .wk-mobile-8 {
+    width: 66.666667%;
+  }
+
+  .wk-mobile-9 {
+    width: 75%;
+  }
+
+  .wk-mobile-10 {
+    width: 83.333333%;
+  }
+
+  .wk-mobile-11 {
+    width: 91.666667%;
+  }
+
+  .wk-mobile-12 {
+    width: 100%;
+  }
+}
+
+
+/* FAQ SECTION CSS */
+/*======================*/
+.faq-accordion-title img.icon {
+  width: 20px;
+  /* Adjust the width as needed */
+  height: 20px;
+  /* Adjust the height as needed */
+  margin-right: 10px;
+  /* Adjust the margin as needed */
+}
+
+.attribution {
+  font-family: 'Raleway', sans-serif;
+  font-size: 11px;
+  text-align: center;
+  background-color: #ff685b;
+  padding: 8px 0 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.attribution a {
+  color: #ff9933;
+}
+
+.card-wrapper {
+  min-height: 100vh;
+  padding-bottom: 50px;
+  /* footer fixed */
+  padding-top: 25px;
+}
+
+p {
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+h2 {
+  margin: 12px 0;
+}
+
+
+/* generics */
+/*================================================*/
+
+.content-cc {
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FAQ card */
+/*================================================*/
+
+.faq-card {
+  font-family: 'Raleway', sans-serif;
+  background-color: #000000;
+  border-radius: 20px;
+  max-width: 1800px;
+  margin-top: 10px;
+  box-shadow: 0px 60px 50px -25px rgba(0, 0, 0, 0.35);
+}
+
+/* FAQ card: imagenes */
+/*================================================*/
+
+
+.faq-ilustrations {
+  position: relative;
+}
+
+.faq-ilustrations .mobile.ilust {
+  position: absolute;
+  top: -110px;
+  left: -30px;
+  right: 0;
+}
+
+.mobile {
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* FAQ card: main */
+/*================================================*/
+.faq-content {
+  padding: 20px 25px 3rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.faq-content h1 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+}
+
+.faq-articles {
+  padding-top: 40px;
+}
+
+.faq-accordion {
+  padding: 25px 0 8px;
+  border-bottom: 1px solid #ff9933;
+}
+
+
+/* FAQ card: main title */
+/*================================================*/
+
+/* checkbox tgg-title*/
+input.tgg-title {
+  appearance: unset;
+  all: unset;
+}
+
+.faq-accordion-title label {
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-accordion-title h2 {
+  font-size: 20px
+    /*var(--font-size)*/
+  ;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.faq-accordion-title span {
+  margin-left: auto;
+  transition: transform .4s ease-in-out;
+}
+
+
+/* FAQ card: main content */
+/*================================================*/
+
+.faq-accordion-content {
+  color: #f1f1f1;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  max-height: 0;
+  transition: max-height .4s ease-in-out;
+  margin-left: 30px;
+}
+
+
+/* Effects */
+/*================================================*/
+
+/* main title, accordion title effects */
+.faq-accordion-title:hover h2 {
+  color: #ff9933;
+}
+
+/* onclick "" */
+.faq-accordion .tgg-title:checked+div>label>h2 {
+  color: #ff9933;
+  padding-bottom: 15px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+}
+
+.faq-accordion:checked {
+  background-color: #ff9933;
+}
+
+.faq-accordion .tgg-title:checked+div>label>span {
+  will-change: transform;
+  transform: rotate(180deg);
+}
+
+/* main content, acordion text effect */
+
+.faq-accordion .tgg-title:checked~.faq-accordion-content {
+  will-change: max-height;
+  max-height: 80px;
+}
+
+
 
 /* Animations */
 @keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeInDrop {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInArrow {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes bounce {
 
-    0%,
-    100% {
-        transform: translateY(0);
-        /* Start and end at the original position */
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+    /* Start and end at the original position */
+  }
 
-    50% {
-        transform: translateY(5px);
-        /* Move up 10 pixels at the middle of the animation */
-    }
+  50% {
+    transform: translateY(5px);
+    /* Move up 10 pixels at the middle of the animation */
+  }
+}
+
+/* Footer Styling */
+/* Footer Styling */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+
+}
+
+.footer-follow {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.socials a {
+  color: white;
+  font-size: 1.1rem;
+  /* Set the base font size for icons */
+  text-decoration: none;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  /* Smooth hover effect */
+}
+
+/* Ensure SVG has the same size as font-awesome icons */
+.socials .social {
+  width: 1.1rem;
+  /* Match the width to font-size */
+  height: auto;
+  /* Maintain aspect ratio */
+  fill: white;
+  transition: fill 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+/* Change font size and color on hover for Font Awesome icons */
+.socials a:hover {
+  color: #ff9933;
+  /* Slight increase on hover */
+  text-decoration: none;
+}
+
+/* Hover effect for SVG icons */
+.socials a:hover .social path {
+  fill: #ff9933;
+  /* Change to orange with transparency on hover */
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #555;
+  margin: 20px 0;
+}
+
+/* Footer Cards */
+.footer-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.footer-card {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 20px;
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+  text-align: left;
+}
+
+.footer-card.map {
+  flex: 2;
+  /* Make the map section wider */
+  max-width: 1000px;
+}
+
+.footer-card.menu,
+.footer-card.contact {
+  flex: 1;
+  /* Make the map section wider */
+  max-width: 300px;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff9933;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  color: #ff9933;
+  transition: color 0.3s;
+}
+
+.footer-card p {
+  margin: 10px 0;
+}
+
+.footer-card.contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-card a:hover {
+  color: #ff9933;
+  text-decoration: none;
+}
+
+.address{
+  font-size: 0.9rem;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: #222;
+  padding: 20px 0 10px;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.footer-bottom i {
+  color: #ff9933;
+}
+
+.socials {
+  position: relative;
+  /* This aligns the icons in the "gap" of the line */
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0 0;
+  gap: 25px;
+  opacity: 1;
+  color: white;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-cards {
+    flex-direction: column;
+  }
+
+  .footer-card.map {
+    flex: 1;
+    /* Make map same width as others on small screens */
+    max-width: 100%;
+  }
 }
 
 
 
-/* General Styles already provided */
-
-/* Responsive Design */
 
 /* Mobile Devices (screens smaller than 768px) */
 @media (max-width: 768px) {
 
-    body,
-    html {
-        overflow: auto;
-        /* Allow scrolling for mobile devices */
-    }
+  body,
+  html {
+    overflow: auto;
+    /* Allow scrolling for mobile devices */
+  }
 
-    .bg-text-stroke {
-        font-size: 28vw;
-        /* Smaller font size for mobile */
-        left: 30vw;
-        /* Adjust positioning */
-        top: 65%;
-        /* Position it better for mobile */
-        letter-spacing: 10px;
-    }
+  .bg-text-stroke {
+    font-size: 28vw;
+    /* Smaller font size for mobile */
+    left: 30vw;
+    /* Adjust positioning */
+    top: 65%;
+    /* Position it better for mobile */
+    letter-spacing: 10px;
+  }
 
-    .logo {
-        top: 28vh;
-        left: -62vw;
-        /* Adjust logo positioning for mobile */
-    }
+  .logo {
+    top: 28vh;
+    left: -62vw;
+    /* Adjust logo positioning for mobile */
+  }
 
-    .logo img {
-        width: 125vw;
-        /* Adjust logo size for mobile */
-    }
+  .logo img {
+    width: 125vw;
+    /* Adjust logo size for mobile */
+  }
 
-    .main-text {
-        font-size: 20vw;
-        top: 67.5vh;
-        left: 36vw;
-        /* Adjust position for mobile */
-        letter-spacing: 10px;
-    }
+  .main-text {
+    font-size: 20vw;
+    top: 67.5vh;
+    left: 36vw;
+    /* Adjust position for mobile */
+    letter-spacing: 10px;
+  }
 
-    .date-info {
-        font-size: 2.5rem;
-        /* Make text smaller for mobile */
-        left: 1vw;
-        top: 18vh;
-        ;
-    }
+  .date-info {
+    font-size: 2.5rem;
+    /* Make text smaller for mobile */
+    left: 1vw;
+    top: 18vh;
+    ;
+  }
 
-    .dates {
-        font-size: 2.2rem;
-        left: 33vw;
-        top: 23vh;
-        right: 0;
-    }
+  .dates {
+    font-size: 2.2rem;
+    left: 33vw;
+    top: 23vh;
+    right: 0;
+  }
 
-    .date-line {
-        width: 100px;
-        /* Make date-line smaller */
-        right: 20vw;
-        top: 21.5vh;
-        ;
-    }
+  .date-line {
+    width: 100px;
+    /* Make date-line smaller */
+    right: 20vw;
+    top: 21.5vh;
+    ;
+  }
 
-    .location {
-        font-size: 1.5rem;
-        /* Adjust location font size */
-        left: 18vw;
-        top: 36vh;
-        right: 0;
-    }
+  .location {
+    font-size: 1.5rem;
+    /* Adjust location font size */
+    left: 18vw;
+    top: 36vh;
+    right: 0;
+  }
 
-    .at {
-        font-size: 4.5rem;
-        top: 31vh;
-        left: 18vw;
-    }
+  .at {
+    font-size: 4.5rem;
+    top: 31vh;
+    left: 18vw;
+  }
 
-    .thm {
-        font-size: 0.81rem;
-        /* Reduce size for mobile */
-        left: 40vw;
-        top: 77.5vh;
-    }
+  .thm {
+    font-size: 0.81rem;
+    /* Reduce size for mobile */
+    left: 40vw;
+    top: 77.5vh;
+  }
 
-    nav {
-        background-color: rgb(0, 0, 0);
-        /* Add background for better readability */
-        top: 0;
-        /* Position at the top */
-        padding-top: 10px;
-        padding-bottom: 10px;
-        z-index: 1001;
-        /* Ensure the nav is on top of the overlay */
-    }
+  nav {
+    background-color: rgb(0, 0, 0);
+    /* Add background for better readability */
+    top: 0;
+    /* Position at the top */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1001;
+    /* Ensure the nav is on top of the overlay */
+  }
 
-    nav .menu-icon {
-        font-size: 6vw;
-        /* Make menu icon larger for touch targets */
-        z-index: 1002;
-        /* Keep the menu icon on top of everything */
-    }
+  nav .menu-icon {
+    font-size: 6vw;
+    /* Make menu icon larger for touch targets */
+    z-index: 1002;
+    /* Keep the menu icon on top of everything */
+  }
 
-    /* Initially hide the ul links */
-    nav ul {
-        display: none;
-        /* Hide the menu links initially */
-        flex-direction: column;
-        /* Stack menu items vertically on mobile */
-        gap: 15px;
-        /* Adjust gap */
-        position: absolute;
-        top: 10vh;
-        left: 0.5vw;
-        padding: 20px;
-        border-radius: 10px;
-        z-index: 1003;
-        /* Ensure the menu is on top of the overlay */
-    }
+  /* Initially hide the ul links */
+  nav ul {
+    display: none;
+    /* Hide the menu links initially */
+    flex-direction: column;
+    /* Stack menu items vertically on mobile */
+    gap: 15px;
+    /* Adjust gap */
+    position: absolute;
+    top: 10vh;
+    left: 0.5vw;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1003;
+    /* Ensure the menu is on top of the overlay */
+  }
 
-    nav ul li {
-        font-size: 5vw;
-        /* Larger font for better readability */
-        text-align: left;
-        /* Align text to the left */
-        color: white;
-        margin-bottom: 15px;
-    }
+  nav ul li {
+    font-size: 5vw;
+    /* Larger font for better readability */
+    text-align: left;
+    /* Align text to the left */
+    color: white;
+    margin-bottom: 15px;
+  }
 
-    .navbar-logo {
-        width: 50vw;
-        /* Adjust logo size */
-    }
+  .navbar-logo {
+    width: 50vw;
+    /* Adjust logo size */
+  }
 
-    /* Overlay effect */
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.9);
-        /* Black overlay */
-        z-index: 1000;
-        /* Behind the nav but above the rest of the page */
-        display: none;
-        /* Initially hidden */
-    }
+  /* Overlay effect */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black overlay */
+    z-index: 1000;
+    /* Behind the nav but above the rest of the page */
+    display: none;
+    /* Initially hidden */
+  }
 
+  /* Show the overlay and menu when active */
+  .overlay.active,
+  nav ul.active {
+    display: block !important;
     /* Show the overlay and menu when active */
-    .overlay.active,
-    nav ul.active {
-        display: block !important;
-        /* Show the overlay and menu when active */
-    }
+  }
 
-    /* Transition for smooth effect */
-    nav ul {
-        transition: opacity 0.3s ease-in-out;
-    }
+  /* Transition for smooth effect */
+  nav ul {
+    transition: opacity 0.3s ease-in-out;
+  }
 
-    .overlay.active {
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
-    }
+  .overlay.active {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
 
-    /* Right-side line with icons */
-    .right-line {
-        height: 43vh;
-        /* Shorter height for mobile */
-        right: 3.15%;
-    }
+  /* Right-side line with icons */
+  .right-line {
+    height: 43vh;
+    /* Shorter height for mobile */
+    right: 3.15%;
+  }
 
-    .right-line.bottom {
-        height: 32vh;
-        /* Shorter height for mobile */
-    }
+  .right-line.bottom {
+    height: 32vh;
+    /* Shorter height for mobile */
+  }
 
-    .social-icons {
-        top: 45vh;
-        /* Adjust position for mobile */
-    }
+  .social-icons {
+    top: 45vh;
+    /* Adjust position for mobile */
+  }
 
-    .social-icons a {
-        font-size: 0.8rem;
-        /* Adjust font size for mobile */
-    }
+  .social-icons a {
+    font-size: 0.8rem;
+    /* Adjust font size for mobile */
+  }
 
-    .social-icons .social-icon {
-        width: 0.8rem;
-        /* Adjust icon size for mobile */
-    }
+  .social-icons .social-icon {
+    width: 0.8rem;
+    /* Adjust icon size for mobile */
+  }
 
-    .scroll-down .arrow-circle {
-        width: 10vw;
-        /* Adjust size of scroll icon */
-        height: 10vw;
-        font-size: 5vw;
-    }
+  .scroll-down .arrow-circle {
+    width: 10vw;
+    /* Adjust size of scroll icon */
+    height: 10vw;
+    font-size: 5vw;
+  }
 
-    /* Change font size and color on hover for Font Awesome icons */
-    .social-icons a:hover {
-        color: #ff9933;
-        /* Slight increase on hover */
-        text-decoration: none;
-    }
+  /* Change font size and color on hover for Font Awesome icons */
+  .social-icons a:hover {
+    color: #ff9933;
+    /* Slight increase on hover */
+    text-decoration: none;
+  }
 
-    /* Hover effect for SVG icons */
-    .social-icons a:hover .social-icon path {
-        fill: #ff9933;
-        /* Change to orange with transparency on hover */
-    }
+  /* Hover effect for SVG icons */
+  .social-icons a:hover .social-icon path {
+    fill: #ff9933;
+    /* Change to orange with transparency on hover */
+  }
+
+
+
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    margin-bottom: 10px;
+  }
 }
+
 
 /* Ultra-wide Screens (screens wider than 1920px) */
 @media (min-width: 1920px) {
-    .container {
-        max-width: 1900px;
-        /* Limit width to avoid stretching */
-        margin: 0 auto;
-    }
+  .container {
+    max-width: 1900px;
+    /* Limit width to avoid stretching */
+    margin: 0 auto;
+  }
 
-    .lander {
-        width: 100%;
-        margin: 0 auto;
-    }
+  .lander {
+    width: 100%;
+    margin: 0 auto;
+  }
 
-    .bg-text-stroke {
-        font-size: 18vw;
-        /* Increase font size */
-        left: 5vw;
-        top: 49vh;
-        letter-spacing: 30px;
-    }
+  .bg-text-stroke {
+    font-size: 18vw;
+    /* Increase font size */
+    left: 5vw;
+    top: 49vh;
+    letter-spacing: 30px;
+  }
 
-    .logo {
-        left: -11.75vw;
-        top: 28vh;
-    }
+  .logo {
+    left: -11.75vw;
+    top: 28vh;
+  }
 
-    .logo img {
-        width: 28.5vw;
-        /* Increase logo size */
-    }
+  .logo img {
+    width: 28.5vw;
+    /* Increase logo size */
+  }
 
-    .main-text {
-        font-size: 10vw;
-        top: 63.5vh;
-        left: 11.75vw;
-        /* Adjust to fill more space */
-        letter-spacing: 30px;
-    }
+  .main-text {
+    font-size: 10vw;
+    top: 63.5vh;
+    left: 11.75vw;
+    /* Adjust to fill more space */
+    letter-spacing: 30px;
+  }
 
-    .date-info {
-        font-size: 5rem;
-        right: 35vw;
-    }
+  .date-info {
+    font-size: 5rem;
+    right: 35vw;
+  }
 
-    .dates {
-        font-size: 5rem;
-        right: 25.5vw;
-        top: 23vh;
-    }
+  .dates {
+    font-size: 5rem;
+    right: 25.5vw;
+    top: 23vh;
+  }
 
-    .date-line {
-        width: 200px;
-        /* Increase width */
-        right: 26.25vw;
-        top: 21vh;
-    }
+  .date-line {
+    width: 200px;
+    /* Increase width */
+    right: 26.25vw;
+    top: 21vh;
+  }
 
-    .location {
-        font-size: 2.25vw;
-        /* Make location text bigger */
-        right: 31.5vw;
-        top: 38vh;
-    }
+  .location {
+    font-size: 2.25vw;
+    /* Make location text bigger */
+    right: 31.5vw;
+    top: 38vh;
+  }
 
-    .at {
-        font-size: 7vw;
-        top: 25vh;
-        left: 20.75vw;
-    }
+  .at {
+    font-size: 7vw;
+    top: 25vh;
+    left: 20.75vw;
+  }
 
-    .thm {
-        font-size: 1.4vw;
-        /* Make it larger for ultrawide */
-        left: 12.5vw;
-        top: 88.5vh;
-    }
+  .thm {
+    font-size: 1.4vw;
+    /* Make it larger for ultrawide */
+    left: 12.5vw;
+    top: 88.5vh;
+  }
 
-    /* Navbar adjustments */
-    nav .menu-icon {
-        font-size: 0.8vw;
-    }
+  /* Navbar adjustments */
+  nav .menu-icon {
+    font-size: 0.8vw;
+  }
 
-    nav ul li {
-        font-size: 1vw;
-    }
+  nav ul li {
+    font-size: 1vw;
+  }
 
-    .navbar-logo {
-        max-height: 150px;
-        /* Increase logo size */
-    }
+  .navbar-logo {
+    max-height: 150px;
+    /* Increase logo size */
+  }
 
-    /* Right-side line with icons */
-    .right-line {
-        height: 58vh;
-    }
+  /* Right-side line with icons */
+  .right-line {
+    height: 58vh;
+  }
 
-    .social-icons {
-        top: 61vh;
-        font-size: 0.8vw;
-    }
+  .social-icons {
+    top: 61vh;
+    font-size: 0.8vw;
+  }
 
-    .scroll-down .arrow-circle {
-        width: 2.5vw;
-        height: 2.5vw;
-        font-size: 2vw;
-    }
+  .scroll-down .arrow-circle {
+    width: 2.5vw;
+    height: 2.5vw;
+    font-size: 2vw;
+  }
 }
