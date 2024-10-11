@@ -13,6 +13,7 @@ body,
 html {
   height: 100%;
   font-family: Arial, sans-serif;
+  background-color: #000000;
 }
 
 
@@ -35,29 +36,63 @@ html {
 
 /*======Back to top button=======*/
 #myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #ff9933; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 10px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 9999;
+  /* High z-index to ensure it's above other elements */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: #ff9933;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 10px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
   margin-bottom: 50px;
 }
-#myBtn span{
+
+#myBtn span {
   display: none;
 }
-#myBtn:hover span{
+
+#myBtn:hover span {
   display: inline-block;
 }
+
 #myBtn:hover {
-  background-color: #ff9933; /* Maintain color on hover */
+  background-color: #ff9933;
+  /* Maintain color on hover */
+}
+
+/* Ensure visibility and proper position on smaller screens */
+@media (max-width: 600px) {
+  #myBtn {
+    /* Initially hidden */
+    bottom: 10px;
+    /* Adjust position for mobile */
+    right: 10px;
+    /* Adjust right margin for mobile */
+    font-size: 16px;
+    /* Slightly smaller font size for mobile */
+    padding: 8px;
+    /* Adjust padding for mobile */
+    z-index: 9999;
+    /* High z-index to ensure it's above other elements */
+  }
 }
 
 .lander {
@@ -241,6 +276,7 @@ nav ul li {
   cursor: pointer;
   text-decoration: none;
 }
+
 nav ul li a {
   text-decoration: none;
 }
@@ -255,7 +291,7 @@ nav ul li:hover {
   max-height: 80px;
 }
 
-.registration{
+.registration {
   text-decoration: none;
   background: #ff9933;
   padding: 10px 20px;
@@ -265,10 +301,11 @@ nav ul li:hover {
 
 
 
-.registration:hover{
+.registration:hover {
   background: transparent;
   border: 2px solid #ff9933;
 }
+
 .hidden {
   display: none !important;
 }
@@ -571,7 +608,8 @@ nav ul li:hover {
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
-    align-items: center; /* Center-align all content on mobile */
+    align-items: center;
+    /* Center-align all content on mobile */
     text-align: center;
   }
 
@@ -583,7 +621,8 @@ nav ul li:hover {
   /* Center the image */
   .about-content img {
     width: 100%;
-    margin: 0 auto 20px; /* Center-align the image */
+    margin: 0 auto 20px;
+    /* Center-align the image */
   }
 
   .about-content .about-title {
@@ -1471,7 +1510,7 @@ hr {
   text-decoration: none;
 }
 
-.address{
+.address {
   font-size: 0.9rem;
   color: #fff;
   margin-top: 10px;
@@ -1506,34 +1545,42 @@ hr {
 /* Responsive */
 @media (max-width: 768px) {
 
-  .faq{
-    padding-bottom: 0px;
-  }
-  .faq-content{
+  .faq {
     padding-bottom: 0px;
   }
 
-  .cards_title{
+  .faq-content {
+    padding-bottom: 0px;
+  }
+
+  .cards_title {
     font-size: 2rem;
   }
-  .faq-articles{
+
+  .faq-articles {
     margin-top: -60px;
   }
+
   .faq-card {
     margin-top: 0;
   }
+
   .gallery {
     padding: 0 0 10px;
   }
+
   .tickets {
     padding: 0 0 10px;
   }
+
   .footer-cards {
     flex-direction: column;
   }
-  
 
-  .footer-card.map,.footer-card.menu,.footer-card.contact {
+
+  .footer-card.map,
+  .footer-card.menu,
+  .footer-card.contact {
     flex: 1;
     /* Make map same width as others on small screens */
     max-width: 100%;
@@ -1675,7 +1722,7 @@ hr {
     /* Adjust logo size */
   }
 
-  .registration{
+  .registration {
     text-decoration: none;
     background: #ff9933;
     padding: 10px 20px;
@@ -1762,25 +1809,29 @@ hr {
     /* Change to orange with transparency on hover */
   }
 
-  .cards{
+  .cards {
     padding: 0;
   }
 
-  .about{
+  .about {
     padding: 0;
     margin-top: -30px;
   }
-  .carousel{
+
+  .carousel {
     padding: 0;
     margin-top: -60px;
   }
-  .tickets{
+
+  .tickets {
     padding: 0;
   }
-  .gallery{
+
+  .gallery {
     padding: 0;
   }
-  .faq{
+
+  .faq {
     padding: 0;
     margin-top: -20px;
   }
@@ -1828,7 +1879,8 @@ hr {
     /* Limit width to avoid stretching */
     margin: 0 auto;
   }
-  .card-container{
+
+  .card-container {
     margin: 0 auto;
     max-width: 1600px;
   }
@@ -1902,7 +1954,7 @@ hr {
     top: 88.5vh;
   }
 
-  nav{
+  nav {
     top: 2%;
     margin: 0 auto;
   }
