@@ -399,7 +399,7 @@ nav ul li:hover {
   z-index: 1;
 }
 
-.row {
+.row-cards {
   display: flex;
   justify-content: space-between;
   /* Ensure cards are spaced evenly */
@@ -410,7 +410,7 @@ nav ul li:hover {
 
 .card {
   width: 400px;
-  height: 240px;
+  min-height: 240px;
   background: #000000;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(255, 153, 51, 0.3);
@@ -535,6 +535,40 @@ nav ul li:hover {
 }
 
 
+/* Media query for screens with a max-width of 768px */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center; /* Center-align all content on mobile */
+    text-align: center;
+  }
+
+  /* Ensure all cards stack with image first and text below */
+  .about-content:nth-child(even) {
+    flex-direction: column;
+  }
+
+  /* Center the image */
+  .about-content img {
+    width: 100%;
+    margin: 0 auto 20px; /* Center-align the image */
+  }
+
+  .about-content .about-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .about-content .about-description {
+    font-size: 0.9rem;
+  }
+
+  .about-content:nth-child(even) img {
+    margin: 10px auto;
+  }
+}
+
 .carousel {
   background: #000000;
   visibility: visible;
@@ -563,7 +597,7 @@ nav ul li:hover {
   margin: 0 auto;
 }
 
-.row {
+.row-ticket {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -1211,7 +1245,7 @@ input.tgg-title {
 
 .faq-accordion .tgg-title:checked~.faq-accordion-content {
   will-change: max-height;
-  max-height: 80px;
+  max-height: 320px;
 }
 
 
@@ -1439,11 +1473,35 @@ hr {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .faq{
+    padding-bottom: 0px;
+  }
+  .faq-content{
+    padding-bottom: 0px;
+  }
+
+  .cards_title{
+    font-size: 2rem;
+  }
+  .faq-articles{
+    margin-top: -60px;
+  }
+  .faq-card {
+    margin-top: 0;
+  }
+  .gallery {
+    padding: 0 0 10px;
+  }
+  .tickets {
+    padding: 0 0 10px;
+  }
   .footer-cards {
     flex-direction: column;
   }
+  
 
-  .footer-card.map {
+  .footer-card.map,.footer-card.menu,.footer-card.contact {
     flex: 1;
     /* Make map same width as others on small screens */
     max-width: 100%;
@@ -1663,9 +1721,33 @@ hr {
     /* Change to orange with transparency on hover */
   }
 
+  .row-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
 
+  .card {
+    width: 90%;
+    /* Set width to 90% to ensure it fits within mobile screen width */
+    margin: 0 auto;
+    /* Center the card */
+    padding: 20px;
+    /* Ensure enough padding for mobile */
+  }
 
-  .row {
+  .card-content {
+    padding: 15px;
+  }
+
+  .card-description {
+    font-size: 1rem;
+  }
+
+  .row-ticket {
     flex-direction: column;
   }
 
@@ -1678,9 +1760,13 @@ hr {
 /* Ultra-wide Screens (screens wider than 1920px) */
 @media (min-width: 1920px) {
   .container {
-    max-width: 1900px;
+    max-width: 1500px;
     /* Limit width to avoid stretching */
     margin: 0 auto;
+  }
+  .card-container{
+    margin: 0 auto;
+    max-width: 1600px;
   }
 
   .lander {
