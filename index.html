@@ -53,8 +53,8 @@
           <a href="#contact" style="text-decoration: none;">
             <li>Contact Us</li>
           </a>
-          <a href="#register" class="registration">
-            <li>Register Now!</li>
+          <a href="#register" style="text-decoration: none;">
+            <li class="registration">Register Now!</li>
           </a>
         </ul>
         <div class="navbar-logo">
@@ -750,7 +750,7 @@
       } else {
         // Reset the nav position when scroll is less than 100px
         nav.style.position = 'absolute';
-        nav.style.top = '5%';
+        nav.style.top = '2%';
         nav.style.backgroundColor = 'transparent'; // Return to initial background (if any)
       }
     });
@@ -783,6 +783,32 @@
       });
     });
   </script>
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        var menu = document.getElementById('navbarMenu');
+        menu.classList.toggle('hidden');
+    });
+    </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuIcon = document.getElementById('menuToggle');
+      const navbarMenu = document.getElementById('navbarMenu');
+      const overlay = document.getElementById('overlay');
+  
+      // Toggle the active class when the menu icon is clicked
+      menuIcon.addEventListener('click', function () {
+        navbarMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+      });
+  
+      // Hide the menu and overlay when the overlay is clicked
+      overlay.addEventListener('click', function () {
+        navbarMenu.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    });
+  </script>
+  
 </body>
 
 </html>
