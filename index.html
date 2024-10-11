@@ -867,6 +867,45 @@
     });
 
   </script>
+  <script>
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  </script>
+  <script>
+    document.onkeydown = function(e) {
+      if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+        // Prevent Ctrl+U (View Source)
+        return false;
+      }
+      if (e.ctrlKey && (e.shiftKey && e.key === 'I' || e.key === 'i')) {
+        // Prevent Ctrl+Shift+I (Inspect)
+        return false;
+      }
+      if (e.ctrlKey && (e.key === 's' || e.key === 'S')) {
+        // Prevent Ctrl+S (Save Page)
+        return false;
+      }
+      if (e.ctrlKey && (e.key === 'c' || e.key === 'C')) {
+        // Prevent Ctrl+C (Copy)
+        return false;
+      }
+      if (e.ctrlKey && (e.key === 'p' || e.key === 'P')) {
+        // Prevent Ctrl+P (Print)
+        return false;
+      }
+    };
+  </script>
+  <script>
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'F12' && e.ctrlKey) {
+        e.preventDefault();
+      }
+    });
+  </script>
+  
+  
+
 
 </body>
 
