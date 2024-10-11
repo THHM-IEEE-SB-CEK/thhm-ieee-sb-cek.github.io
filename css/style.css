@@ -427,7 +427,7 @@ nav ul li:hover {
 /* CARDS SECTION */
 
 .cards {
-  background: linear-gradient(to bottom, #181717, #000000);
+  background: #000000;
   padding: 60px 0 0;
   z-index: 1;
   position: relative;
@@ -641,7 +641,7 @@ nav ul li:hover {
 }
 
 .carousel {
-  background: #000000;
+  background: linear-gradient(to bottom, #181717, #000000);
   visibility: visible;
   opacity: 1;
   position: relative;
