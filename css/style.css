@@ -1448,6 +1448,12 @@ hr {
   padding: 20px;
 }
 
+.terms {
+  font-size: 0.9rem;
+  color: #dbd2d2;
+  margin-top: 20px;
+}
+
 .footer-card {
   background-color: #111;
   padding: 20px;
@@ -1615,6 +1621,10 @@ hr {
     /* Adjust logo positioning for mobile */
   }
 
+  .terms{
+    font-size: 0.8rem;
+    /* Adjust font size for mobile */
+  }
   .logo img {
     width: 125vw;
     /* Adjust logo size for mobile */
